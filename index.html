@@ -1,6 +1,6 @@
 <!doctype html><html lang="ru"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Горизонт</title>
-<meta name="description" content="Горизонт: короткие уроки по дороге, деловому общению и навыкам будущего. Солнце цели дня, блиц, разминка и аккаунты с паролем.">
+<meta name="description" content="Горизонт: короткие уроки и авторские курсы по дороге, деловому общению и навыкам будущего. Создавай задания, ветвления и делись курсами.">
 <meta name="theme-color" content="#0B7A85">
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='9' fill='%230B7A85'/%3E%3Cpath d='M7 22a10 10 0 0 1 20 0z' fill='%23FFC247'/%3E%3Cpath d='M3 25h28' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -22,7 +22,7 @@
   --f-m:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
+  :root:not([data-theme]){
     --bg:#08111B; --surface:#0F1B29; --surface2:#172A3C; --ink:#E8EEF4; --muted:#93A5B8; --line:#223548;
     --accent:#4FD1D0; --on-accent:#05181C;
     --sun:#FFC247; --on-sun:#2B1A00; --streak:#FF8A4C; --heart:#FF6B88; --ice:#6CB8F2;
@@ -41,6 +41,46 @@
   --bad:#FF7B6E; --bad-bg:#40201C; --bad-d:#FFA79E; --on-bad:#2A0A07;
   --u1:#4FD1D0; --u2:#F5B54A; --u3:#FF8A5B; --u4:#A3A9FF; --on-u:#07131C;
   --sky-a:#0A1830; --sky-b:#3A2F5C; --hill-a:#13394A; --hill-b:#0B2535; --sun-core:#FFC247; --sun-glow:#7A5A2A;
+  color-scheme:dark;
+}
+:root[data-theme="ocean"]{
+  --bg:#EAF4FA;--surface:#F8FCFF;--surface2:#DCECF5;--ink:#102B3D;--muted:#4E6C7E;--line:#C4DCE9;
+  --accent:#176B91;--on-accent:#fff;--sun:#F3B33D;--on-sun:#2B1A00;--streak:#E86B45;--heart:#D94B68;--ice:#2587C5;
+  --good:#18734F;--good-bg:#DCEFE6;--good-d:#0D5A34;--on-good:#fff;--bad:#B63F39;--bad-bg:#F8E3E1;--bad-d:#8B2217;--on-bad:#fff;
+  --u1:#176B91;--u2:#9A6417;--u3:#B94A31;--u4:#6555A9;--on-u:#fff;
+  --sky-a:#BBDFF0;--sky-b:#FBE3C2;--hill-a:#78B5B3;--hill-b:#317C8C;--sun-core:#FFC247;--sun-glow:#FFE2A2;
+  color-scheme:light;
+}
+:root[data-theme="sunset"]{
+  --bg:#FFF2E9;--surface:#FFFBF7;--surface2:#F9E4D6;--ink:#38251F;--muted:#785D51;--line:#EBD2C2;
+  --accent:#C94F36;--on-accent:#fff;--sun:#E99A2D;--on-sun:#2B1A00;--streak:#D45132;--heart:#C74361;--ice:#4B87A4;
+  --good:#39734D;--good-bg:#E4F0E2;--good-d:#275C38;--on-good:#fff;--bad:#B43E32;--bad-bg:#F9E2DC;--bad-d:#81271E;--on-bad:#fff;
+  --u1:#C94F36;--u2:#A56A25;--u3:#A93F32;--u4:#75518C;--on-u:#fff;
+  --sky-a:#F5C9AE;--sky-b:#FFE6B7;--hill-a:#9CB99A;--hill-b:#64816F;--sun-core:#FFB54A;--sun-glow:#FFE1A8;
+  color-scheme:light;
+}
+:root[data-theme="forest"]{
+  --bg:#EDF4EA;--surface:#FBFFF8;--surface2:#DFEADB;--ink:#1C3025;--muted:#536C5A;--line:#CBDCC8;
+  --accent:#38734E;--on-accent:#fff;--sun:#E4A837;--on-sun:#2B1A00;--streak:#C96B38;--heart:#C6485B;--ice:#4187A0;
+  --good:#2D7349;--good-bg:#DFEFE2;--good-d:#205B36;--on-good:#fff;--bad:#B84B3C;--bad-bg:#F7E5DF;--bad-d:#8B3024;--on-bad:#fff;
+  --u1:#38734E;--u2:#9A681F;--u3:#B55A35;--u4:#5C6E9A;--on-u:#fff;
+  --sky-a:#C9E0C6;--sky-b:#F4E7C5;--hill-a:#8DB99A;--hill-b:#4B8063;--sun-core:#FFC247;--sun-glow:#FCE6A7;
+  color-scheme:light;
+}
+:root[data-theme="lavender"]{
+  --bg:#F2EFFA;--surface:#FCFAFF;--surface2:#E7E1F2;--ink:#29243B;--muted:#655D78;--line:#D7CEE8;
+  --accent:#7157B5;--on-accent:#fff;--sun:#E5A83C;--on-sun:#2B1A00;--streak:#CF634B;--heart:#CE4D72;--ice:#538CB3;
+  --good:#3D795A;--good-bg:#E1F0E8;--good-d:#2A6042;--on-good:#fff;--bad:#B94C50;--bad-bg:#F8E3E5;--bad-d:#8D3035;--on-bad:#fff;
+  --u1:#7157B5;--u2:#997028;--u3:#BE5D45;--u4:#5B6FAF;--on-u:#fff;
+  --sky-a:#D2C7EE;--sky-b:#F9DDE1;--hill-a:#A8B5C9;--hill-b:#6F7F9E;--sun-core:#FFC247;--sun-glow:#F8D9A3;
+  color-scheme:light;
+}
+:root[data-theme="halloween"]{
+  --bg:#100D19;--surface:#1B1628;--surface2:#292039;--ink:#F6F0FF;--muted:#B7A9C9;--line:#433650;
+  --accent:#FF7A1A;--on-accent:#241000;--sun:#FFB52E;--on-sun:#2A1600;--streak:#FF784F;--heart:#FF5478;--ice:#72BFE8;
+  --good:#55D68B;--good-bg:#173626;--good-d:#8AE9AD;--on-good:#092315;--bad:#FF746B;--bad-bg:#44212D;--bad-d:#FFAAA2;--on-bad:#2A0A0B;
+  --u1:#E66B20;--u2:#B7812E;--u3:#A84E47;--u4:#9471D1;--on-u:#180E22;
+  --sky-a:#211A37;--sky-b:#5A3048;--hill-a:#4E5751;--hill-b:#252B31;--sun-core:#FFB52E;--sun-glow:#FF7A1A;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -192,6 +232,17 @@ label.l{display:block;font:700 13px var(--f-b);color:var(--muted);margin:12px 0 
 .pc h3{font:700 17px var(--f-d)}
 .pc p{font-size:14px;color:var(--muted);flex:1}
 .pc .btn{align-self:flex-start}
+.practice-plan{border-color:color-mix(in srgb,var(--accent) 45%,var(--line));background:linear-gradient(130deg,color-mix(in srgb,var(--accent) 10%,var(--surface)),var(--surface))}
+.practice-plan-top{display:flex;align-items:center;gap:12px}
+.practice-plan-top .pi{width:44px;height:44px;flex:none;border-radius:13px;background:color-mix(in srgb,var(--accent) 16%,var(--surface2));color:var(--accent);display:grid;place-items:center}
+.practice-plan-top .pi .ic{width:24px;height:24px}
+.practice-plan-copy{flex:1;min-width:0}
+.practice-plan-copy h2{margin:0 0 2px}
+.practice-plan-copy p{font-size:14px;color:var(--muted)}
+.practice-progress{height:9px;margin:14px 0 10px;border-radius:999px;background:var(--surface2);overflow:hidden}
+.practice-progress i{height:100%;display:block;border-radius:inherit;background:linear-gradient(90deg,var(--accent),var(--sun));transition:width .25s ease}
+.practice-plan-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.practice-plan-foot .sub{font-size:13px}
 .back{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:var(--accent);font:700 14px var(--f-b);padding:4px 0}
 .back .ic{width:18px;height:18px}
 .tl{display:flex;flex-direction:column}
@@ -360,8 +411,9 @@ label.l{display:block;font:700 13px var(--f-b);color:var(--muted);margin:12px 0 
 
 /* responsive */
 @media (max-width:759px){
-  .nav{position:fixed;left:0;right:0;bottom:0;z-index:6;justify-content:space-around;gap:4px;background:var(--surface);border-top:1px solid var(--line);padding:6px max(12px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
-  .nav button{flex:1;flex-direction:column;gap:2px;justify-content:center;padding:8px 6px;font-size:12px}
+  .nav{position:fixed;left:0;right:0;bottom:0;z-index:6;justify-content:flex-start;gap:4px;overflow-x:auto;scrollbar-width:none;background:var(--surface);border-top:1px solid var(--line);padding:6px max(12px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+  .nav::-webkit-scrollbar{display:none}
+  .nav button{flex:0 0 56px;flex-direction:column;gap:2px;justify-content:center;padding:6px 2px;font-size:10px}
   main{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 }
 @media (max-width:560px){
@@ -436,11 +488,25 @@ body{background:radial-gradient(900px 420px at 50% -140px,color-mix(in srgb,var(
 .lbtn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(13,27,42,.07)}
 .tile:hover{transform:translateY(-1px)}
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]) .card,:root:not([data-theme="light"]) .pc,:root:not([data-theme="light"]) .tile,:root:not([data-theme="light"]) .ach,:root:not([data-theme="light"]) .admunit,:root:not([data-theme="light"]) .admq{box-shadow:0 1px 2px rgba(0,0,0,.25)}
-  :root:not([data-theme="light"]) .course:hover,:root:not([data-theme="light"]) .pc:hover,:root:not([data-theme="light"]) .lbtn:hover{box-shadow:0 6px 18px rgba(0,0,0,.35)}
+  :root:not([data-theme]) .card,:root:not([data-theme]) .pc,:root:not([data-theme]) .tile,:root:not([data-theme]) .ach,:root:not([data-theme]) .admunit,:root:not([data-theme]) .admq{box-shadow:0 1px 2px rgba(0,0,0,.25)}
+  :root:not([data-theme]) .course:hover,:root:not([data-theme]) .pc:hover,:root:not([data-theme]) .lbtn:hover{box-shadow:0 6px 18px rgba(0,0,0,.35)}
 }
 :root[data-theme="dark"] .card,:root[data-theme="dark"] .pc,:root[data-theme="dark"] .tile,:root[data-theme="dark"] .ach,:root[data-theme="dark"] .admunit,:root[data-theme="dark"] .admq{box-shadow:0 1px 2px rgba(0,0,0,.25)}
 :root[data-theme="dark"] .course:hover,:root[data-theme="dark"] .pc:hover,:root[data-theme="dark"] .lbtn:hover{box-shadow:0 6px 18px rgba(0,0,0,.35)}
+:root[data-theme="ocean"] .card,:root[data-theme="sunset"] .card,:root[data-theme="forest"] .card,:root[data-theme="lavender"] .card{box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 7%,transparent)}
+:root[data-theme="sunset"] .hdr,:root[data-theme="forest"] .hdr,:root[data-theme="lavender"] .hdr,:root[data-theme="ocean"] .hdr{background:color-mix(in srgb,var(--bg) 88%,transparent)}
+:root[data-theme="halloween"] body{background:radial-gradient(ellipse at 82% 4%,rgba(131,61,163,.25),transparent 38%),radial-gradient(ellipse at 8% 38%,rgba(255,111,24,.12),transparent 32%),var(--bg)}
+:root[data-theme="halloween"] .hdr{background:color-mix(in srgb,var(--bg) 88%,transparent);border-color:#50394E}
+:root[data-theme="halloween"] .logo{position:relative}
+:root[data-theme="halloween"] .logo::after{content:"🦇";position:absolute;left:20px;top:-8px;font:14px/1 var(--f-b);filter:drop-shadow(0 0 5px #B66AF0);animation:halloween-bat 3.2s ease-in-out infinite}
+:root[data-theme="halloween"] .card,:root[data-theme="halloween"] .pc,:root[data-theme="halloween"] .tile,:root[data-theme="halloween"] .studio-course{box-shadow:0 10px 28px -16px rgba(0,0,0,.8),0 0 0 1px rgba(184,103,220,.08)}
+:root[data-theme="halloween"] .horizon{border-color:#6D455B;box-shadow:0 14px 36px -18px rgba(255,122,26,.42)}
+:root[data-theme="halloween"] .horizon::after{content:"🎃";position:absolute;z-index:2;right:18px;bottom:10px;font-size:34px;filter:drop-shadow(0 0 12px rgba(255,122,26,.65));animation:halloween-pumpkin 2.4s ease-in-out infinite;pointer-events:none}
+:root[data-theme="halloween"] .nd{filter:drop-shadow(0 0 8px color-mix(in srgb,var(--accent) 45%,transparent))}
+:root[data-theme="halloween"] .mascot[data-face="horror"] .mascot-horror{filter:drop-shadow(0 0 5px #FF3158)}
+@keyframes halloween-bat{50%{transform:translate(5px,-3px) rotate(8deg)}}
+@keyframes halloween-pumpkin{50%{transform:translateY(-3px) rotate(-4deg);filter:drop-shadow(0 0 16px rgba(255,122,26,.9))}}
+@media(prefers-reduced-motion:reduce){:root[data-theme="halloween"] .logo::after,:root[data-theme="halloween"] .horizon::after{animation:none}}
 
 /* admin (CMS) */
 .admtable{display:flex;flex-direction:column}
@@ -547,6 +613,63 @@ select.inp{appearance:auto}
 
 .l-foot.good,.l-foot.bad{animation:in .22s ease both}
 </style>
+<style>
+.studio-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.studio-hero{display:flex;align-items:flex-start;gap:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 12%,var(--surface)),var(--surface))}
+.studio-hero .tour-ic{flex:none}
+.studio-toolbar,.studio-actions,.studio-qtools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.studio-toolbar{margin-top:12px}
+.studio-course-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-top:12px}
+.studio-course{border:1.5px solid var(--line);border-radius:14px;background:var(--surface);padding:13px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.studio-course.selected{border-color:var(--accent);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 15%,transparent)}
+.studio-course h3{font:700 15px/1.3 var(--f-d);overflow-wrap:anywhere}
+.studio-course .sub{font-size:12px}
+.studio-q{border:1.5px solid var(--line);border-radius:14px;background:var(--surface);padding:14px;margin-top:12px}
+.studio-q[draggable=true]{cursor:grab}
+.studio-q.dragging{opacity:.45}
+.studio-q.drop-target{border-color:var(--accent);border-style:dashed}
+.studio-qhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.studio-qhead b{margin-right:auto}
+.studio-drag{color:var(--muted);font:700 12px var(--f-m);cursor:grab}
+.studio-options{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.studio-branch{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.studio-branch label{margin-bottom:4px}
+.studio-empty{padding:18px;border:1.5px dashed var(--line);border-radius:14px;color:var(--muted);text-align:center;margin-top:12px}
+.studio-q .inp{margin-bottom:2px}
+@media(max-width:480px){.studio-options,.studio-branch{grid-template-columns:1fr}.studio-course-list{grid-template-columns:1fr}}
+.duel-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.duel-row:first-of-type{border-top:0}
+.duel-row b{display:block}
+.duel-track{height:8px;overflow:hidden;border-radius:8px;background:var(--surface2);margin-top:5px}
+.duel-track i{height:100%;display:block;background:var(--accent);transition:width .25s ease}
+.duel-card{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.duel-live{padding:12px;border-radius:14px;background:var(--surface);border:1px solid var(--line);margin-bottom:14px}
+.duel-code{font:800 26px var(--f-m);letter-spacing:.14em;color:var(--accent);word-break:break-all}
+.duel-state{padding:12px;border-radius:12px;background:var(--surface2);margin-top:12px}
+.mascot{display:block;overflow:visible}
+.mascot-rays{transform-origin:50px 50px;animation:mascot-spin 28s linear infinite}
+.mascot-expression{opacity:0}
+.mascot[data-face=happy] .mascot-happy,
+.mascot[data-face=surprise] .mascot-surprise,
+.mascot[data-face=sleepy] .mascot-sleepy,
+.mascot[data-face=horror] .mascot-horror{opacity:1}
+.mascot-bob{transform-origin:50px 50px;animation:mascot-bob 2.8s ease-in-out infinite}
+@keyframes mascot-spin{to{transform:rotate(360deg)}}
+@keyframes mascot-bob{50%{transform:translateY(-2px) rotate(-2deg)}}
+.avatar .mascot{width:34px;height:34px}
+.mascot-picks{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.mascot-pick{display:flex;align-items:center;gap:7px;min-height:44px;padding:5px 10px 5px 6px}
+.mascot-pick .mascot{width:32px;height:32px}
+.mascot-pick[aria-pressed=true]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--surface));color:var(--accent)}
+.avatar-letter{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--on-accent);font:800 14px var(--f-d)}
+.theme-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:8px;margin-top:10px}
+.setrow>.theme-grid{flex:1 1 100%;width:100%}
+.theme-choice{display:flex;align-items:center;gap:9px;min-height:48px;padding:8px 10px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);text-align:left;font:700 13px var(--f-b);transition:border-color .15s,background .15s,transform .15s}
+.theme-choice:hover{transform:translateY(-1px);border-color:var(--accent)}
+.theme-choice[aria-pressed=true]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,var(--surface));color:var(--accent)}
+.theme-dot{width:24px;height:24px;flex:none;border:1px solid color-mix(in srgb,var(--ink) 15%,transparent);border-radius:50%;background:linear-gradient(145deg,var(--dot-a) 0 52%,var(--dot-b) 53% 100%)}
+@media(prefers-reduced-motion:reduce){.mascot-rays,.mascot-bob{animation:none}}
+</style>
 
 <header class="hdr">
   <div class="wrap hdr-in">
@@ -567,6 +690,7 @@ select.inp{appearance:auto}
   <section class="view" id="v-practice" aria-label="Практика" hidden></section>
   <section class="view" id="v-league" aria-label="Лига" hidden></section>
   <section class="view" id="v-profile" aria-label="Профиль" hidden></section>
+  <section class="view" id="v-studio" aria-label="Студия курсов" hidden></section>
   <section class="view" id="v-admin" aria-label="Админка" hidden></section>
 </main>
 
@@ -1216,10 +1340,11 @@ function escQ(q){
   else if(q.t==='tf')o.a=q.a;
   else if(q.t==='o')o.items=q.items.map(esc);
   else o.pairs=q.pairs.map(p=>[esc(p[0]),esc(p[1])]);
+  if(q.branch)o.branch={correct:q.branch.correct,wrong:q.branch.wrong};
   return o;
 }
-function escUnit(u){return {uid:u.uid,course:u.course,title:esc(u.title),desc:esc(u.desc),c:u.c,custom:true,lessons:u.lessons.map(l=>({id:l.id,title:esc(l.title),custom:true,q:l.q.map(escQ)}))}}
-function applyCustom(){UNITS=BASE_UNITS.concat(CUSTOM.map(escUnit))}
+function escUnit(u){return {uid:u.uid,course:u.course,title:esc(u.title),desc:esc(u.desc),c:u.c,custom:true,author:u.author||'',authorName:u.authorName||'',published:u.published!==false,lessons:u.lessons.map(l=>({id:l.id,title:esc(l.title),custom:true,q:l.q.map(escQ)}))}}
+function applyCustom(){UNITS=BASE_UNITS.concat(CUSTOM.filter(u=>u.published!==false||u.author===(ME&&ME.id)).map(escUnit))}
 let FLAT=[];
 let ALLQ=[];
 function rebuildDerived(){
@@ -1380,6 +1505,11 @@ function weakList(){
   for(const k in S.weak){const w=S.weak[k],f=FLAT.find(x=>x.id===w.lid);if(f&&f.l.q[w.qi])out.push({lid:w.lid,qi:w.qi,q:f.l.q[w.qi]})}
   return out;
 }
+function weakCourseCounts(){
+  const counts={};
+  weakList().forEach(w=>{const f=FLAT.find(x=>x.id===w.lid);if(f)counts[f.u.course]=(counts[f.u.course]||0)+1});
+  return counts;
+}
 const weakCount=()=>Object.keys(S.weak).length;
 
 /* ---------- accounts (this device): name + password ---------- */
@@ -1398,6 +1528,7 @@ function validQ(q){
   if(!q||typeof q!=='object')return false;
   const S1=(x,n)=>typeof x==='string'&&x.length<=(n||600);
   if(!S1(q.q)||!S1(q.e))return false;
+  if(q.branch!==undefined&&(!q.branch||typeof q.branch!=='object'||['correct','wrong'].some(k=>q.branch[k]!==undefined&&q.branch[k]!==null&&q.branch[k]!==-1&&(!Number.isInteger(q.branch[k])||q.branch[k]<0))))return false;
   if(q.img!==undefined&&q.img!==''&&!(typeof q.img==='string'&&Object.prototype.hasOwnProperty.call(SIGN,q.img)))return false;
   if(q.t==='c')return Array.isArray(q.o)&&q.o.length>=2&&q.o.length<=4&&q.o.every(o=>S1(o,300))&&Number.isInteger(q.a)&&q.a>=0&&q.a<q.o.length;
   if(q.t==='tf')return typeof q.a==='boolean';
@@ -1406,7 +1537,7 @@ function validQ(q){
   return false;
 }
 function validCustomUnit(u){
-  return u&&typeof u==='object'&&typeof u.uid==='string'&&IDRE.test(u.uid)&&typeof u.course==='string'&&COURSES.some(c=>c.id===u.course)&&typeof u.title==='string'&&u.title.length<=120&&typeof u.desc==='string'&&u.desc.length<=240&&Number.isInteger(u.c)&&u.c>=1&&u.c<=4&&Array.isArray(u.lessons)&&u.lessons.length<=60&&u.lessons.every(l=>l&&typeof l.id==='string'&&IDRE.test(l.id)&&typeof l.title==='string'&&l.title.length<=120&&Array.isArray(l.q)&&l.q.length>0&&l.q.length<=30&&l.q.every(validQ));
+  return u&&typeof u==='object'&&typeof u.uid==='string'&&IDRE.test(u.uid)&&typeof u.course==='string'&&COURSES.some(c=>c.id===u.course)&&typeof u.title==='string'&&u.title.length<=120&&typeof u.desc==='string'&&u.desc.length<=240&&Number.isInteger(u.c)&&u.c>=1&&u.c<=4&&Array.isArray(u.lessons)&&u.lessons.length<=60&&u.lessons.every(l=>l&&typeof l.id==='string'&&IDRE.test(l.id)&&typeof l.title==='string'&&l.title.length<=120&&Array.isArray(l.q)&&l.q.length>0&&l.q.length<=30&&l.q.every((q,i)=>validQ(q)&&(!q.branch||['correct','wrong'].every(k=>q.branch[k]===undefined||q.branch[k]===null||q.branch[k]===-1||(Number.isInteger(q.branch[k])&&q.branch[k]>i&&q.branch[k]<l.q.length)))));
 }
 function loadCustom(){
   try{const a=JSON.parse(lsGet(CK)||'[]');if(Array.isArray(a))return a.filter(validCustomUnit)}catch(e){}
@@ -1493,7 +1624,9 @@ const PROT='a-edward';/* built-in admin: cannot be deleted or demoted */
 const takenAcc=n=>{const k=nameKey(n);return ACC.list.find(a=>nameKey(a.name)===k)};
 
 function enter(acct,remember){
+  if(ME&&ME.id!==acct.id){studioReset('future');view='path'}
   lastXp=-1;lvlUp=0;ME=acct;ssSet(acct.id);
+  applyCustom();rebuildDerived();
   if(!acct.guest&&remember!==undefined){ACC.cur=remember?acct.id:null;saveAcc()}
   if(acct.guest){ACC.cur=remember?'guest':ACC.cur;saveAcc()}
   S=loadState(acct.id);rollDay();tickHearts();leagueRoll();saveLocal();cloudSync();
@@ -1503,16 +1636,25 @@ function enter(acct,remember){
   else if(S.lgRes)setTimeout(()=>{if(ME===acct&&$('#sheet').hidden&&!L&&$('#auth').hidden)showLeagueResult()},500);
 }
 function logout(){
-  cloudOut();ssSet(null);ACC.cur=null;saveAcc();ME=null;S=blank();
+  duelStopListening();DUEL={id:'',room:null,unsub:null,uid:'',error:'',playing:''};
+  cloudOut();ssSet(null);ACC.cur=null;saveAcc();studioReset('future');view='path';ME=null;S=blank();
   if(L)exitLesson(true);
   showAuth(ACC.list.length?'pick':'register');
 }
 
 /* ---------- theme + sound ---------- */
 function getTheme(){try{return localStorage.getItem(TK)||'system'}catch(e){return mem[TK]||'system'}}
+const THEMES=[
+  ['system','Авто','#DCEAF2','#152838'],['light','Светлая','#FFFFFF','#E3EAF0'],['dark','Тёмная','#0F1B29','#4FD1D0'],
+  ['ocean','Океан','#F8FCFF','#176B91'],['sunset','Закат','#FFFBF7','#C94F36'],['forest','Лес','#FBFFF8','#38734E'],['lavender','Лаванда','#FCFAFF','#7157B5'],
+  ['halloween','Хэллоуин','#1B1628','#FF7A1A']
+];
 function setTheme(v){
+  if(!THEMES.some(t=>t[0]===v))v='system';
   lsSet(TK,v);
   if(v==='system')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',v);
+  const meta=$('meta[name="theme-color"]');
+  if(meta)meta.content=getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()||'#EDF2F6';
 }
 let AC=null;
 function tone(f,t0,d,type,v){
@@ -1553,8 +1695,8 @@ function closeSheet(){
 
 /* ---------- render: header ---------- */
 const NAV=[['path','route','Путь'],['practice','target','Практика'],['league','trophy','Лига'],['profile','user','Профиль']];
-function navItems(){return (ME&&ME.admin)?NAV.concat([['admin','shield','Админка']]):NAV}
-function renderNav(){$('#nav').innerHTML=navItems().map(n=>'<button data-v="'+n[0]+'"'+(n[0]===view?' aria-current="page"':'')+'>'+svg(n[1])+'<span>'+n[2]+'</span></button>').join('')}
+function navItems(){const n=NAV.concat([['studio','book','Курсы']]);return (ME&&ME.admin)?n.concat([['admin','shield','Админка']]):n}
+function renderNav(){$('#nav').innerHTML=navItems().map(n=>'<button data-v="'+n[0]+'" aria-label="'+n[2]+'"'+(n[0]===view?' aria-current="page"':'')+'>'+svg(n[1])+'<span>'+n[2]+'</span></button>').join('')}
 let lastXp=-1;
 function renderHdr(){
   tickHearts();
@@ -1616,10 +1758,13 @@ function evCard(){const e=evGet();if(!e)return '';return '<div class="card" styl
 function evAdmin(){const e=evGet();let h='<div class="card"><h2>Событие с бонусом</h2>';if(e)h+='<p class="sub">Идёт: '+esc(e.name)+' (×'+e.m+'), осталось '+evLeft(e)+'. Видно всем аккаунтам на этом устройстве.</p><button class="btn bad sm" style="margin-top:10px" data-act="ev-stop">Завершить событие</button>';else h+='<p class="sub">Запусти временное событие: опыт за уроки умножается для всех аккаунтов на этом устройстве.</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn sm" data-act="ev-start" data-m="2" data-h="1">×2 на 1 час</button><button class="btn sm" data-act="ev-start" data-m="2" data-h="24">×2 на сутки</button><button class="btn sm sun" data-act="ev-start" data-m="3" data-h="24">×3 на сутки</button><button class="btn sm sun" data-act="ev-start" data-m="3" data-h="168">×3 на неделю</button></div>';return h+'</div>'}
 /* personal style: accent colour + avatar, stored per account */
 const PAL=[['Бирюза',''],['Фиолет','#7A3FE0'],['Закат','#E8590C'],['Роза','#D6336C'],['Лайм','#2F9E44'],['Океан','#1C7ED6']];
-function pers(){try{const p=JSON.parse(lsGet('gz2-pal-'+(ME?ME.id:''))||'{}')||{};if(p.a&&p.a!=='s')p.a='';return p}catch(e){return {}}}
+function pers(){try{const p=JSON.parse(lsGet('gz2-pal-'+(ME?ME.id:''))||'{}')||{};if(p.a&&!['s','sun','cat','alien'].includes(p.a))p.a='';return p}catch(e){return {}}}
 function applyPersonal(){const r=document.documentElement,p=ME?pers():{};if(p.c){r.style.setProperty('--accent',p.c);r.style.setProperty('--on-accent','#fff')}else{r.style.removeProperty('--accent');r.style.removeProperty('--on-accent')}}
-function avatarHtml(a){return smiler(40)}
-function styleCard(){const p=pers();return '<div class="card"><h2>Мой стиль</h2><p class="sub">Цвет приложения</p><div class="chips" style="margin:8px 0 14px">'+PAL.map(c=>'<button class="swt" data-act="pcol" data-c="'+c[1]+'" aria-label="'+c[0]+'" aria-pressed="'+((p.c||'')===c[1])+'" style="background:'+(c[1]||'#0B7A85')+'"></button>').join('')+'</div><p class="sub">Мой герой в шапке</p><div class="chips" style="margin-top:8px">'+[['','Буква'],['s','Улыбака']].map(a=>'<button class="chip-i" data-act="pav" data-a="'+a[0]+'" aria-pressed="'+((p.a||'')===a[0])+'">'+a[1]+'</button>').join('')+'</div></div>'}
+function avatarHtml(a){return smiler(40,a)}
+function styleCard(){
+  const p=pers(),heroes=[['','Буква'],['s','Улыбака'],['sun','Солнышко'],['cat','Котик'],['alien','Инопланетянин']];
+  return '<div class="card"><h2>Мой стиль</h2><p class="sub">Цвет приложения</p><div class="chips" style="margin:8px 0 14px">'+PAL.map(c=>'<button class="swt" data-act="pcol" data-c="'+c[1]+'" aria-label="'+c[0]+'" aria-pressed="'+((p.c||'')===c[1])+'" style="background:'+(c[1]||'#0B7A85')+'"></button>').join('')+'</div><p class="sub">Мой герой в шапке</p><div class="mascot-picks">'+heroes.map(a=>'<button class="chip-i mascot-pick" data-act="pav" data-a="'+a[0]+'" aria-pressed="'+((p.a||'')===a[0])+'">'+(a[0]?smiler(32,a[0]):'<span class="avatar-letter">'+esc(ME?initial(ME.name):'?')+'</span>')+'<span>'+a[1]+'</span></button>').join('')+'</div><p class="sub" style="margin-top:10px">Герои меняют выражение лица, пока ты учишься.</p></div>'
+}
 /* marathon event: endless questions, one attempt, top-3 prizes; admin starts it */
 const MK='gz2-mar',MRK='gz2-mar-res';
 function marEv(){try{return JSON.parse(lsGet(MK)||'null')}catch(e){return null}}
@@ -1663,7 +1808,27 @@ function factCard(){
   if(factI<0)factI=Math.floor(Date.now()/864e5)%FACTS.length;
   return '<div class="card fact"><span style="float:right;margin:0 0 6px 10px">'+smiler(52)+'</span><h2>Улыбака знает</h2><p>'+esc(FACTS[factI])+'</p><button class="btn ghost sm" data-act="fact" style="margin-top:10px">Ещё факт</button></div>';
 }
-function smiler(n){const l=[30,38,46,54,62,70].map(x=>'<path d="M'+x+' 58V76" stroke="#1a1100" stroke-width="1.3"/>').join('');return '<svg class="smiler" viewBox="0 0 100 100" width="'+(n||80)+'" height="'+(n||80)+'" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="#f7d90a"/><circle cx="36" cy="38" r="10" fill="#8a2a5a" opacity=".35"/><circle cx="64" cy="38" r="10" fill="#8a2a5a" opacity=".35"/><ellipse cx="36" cy="38" rx="4.5" ry="7" fill="#1a1100"/><ellipse cx="64" cy="38" rx="4.5" ry="7" fill="#1a1100"/><path d="M12 52Q50 100 88 52Q50 64 12 52Z" fill="#1a1100"/><path d="M22 57Q50 86 78 57Q50 68 22 57Z" fill="#fff"/>'+l+'</svg>'}
+function smiler(n,kind){
+  const size=n||80,type=kind||'s',cfg={
+    s:{fill:'#F7D90A',line:'#1A1100',extra:''},
+    sun:{fill:'#FFC247',line:'#754400',extra:'<g class="mascot-rays" fill="none" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"><path d="M50 1v10M50 89v10M1 50h10M89 50h10M15.4 15.4l7 7M77.6 77.6l7 7M84.6 15.4l-7 7M22.4 77.6l-7 7"/></g>'},
+    cat:{fill:'#8BD5D0',line:'#174D52',extra:'<path d="M13 38 16 8l25 19M59 27 84 8l3 30" fill="#8BD5D0" stroke="#174D52" stroke-width="5" stroke-linejoin="round"/><path d="m22 22 15 8M78 22l-15 8" stroke="#F7A5A5" stroke-width="5" stroke-linecap="round"/>'},
+    alien:{fill:'#B8E986',line:'#285125',extra:'<path d="M35 13 27 3M65 13l8-10" stroke="#285125" stroke-width="4" stroke-linecap="round"/><circle cx="25" cy="4" r="5" fill="#B56CE2"/><circle cx="75" cy="4" r="5" fill="#B56CE2"/>'}
+  }[type]||{fill:'#F7D90A',line:'#1A1100',extra:''};
+  const eyes=(y,rx,ry)=>'<ellipse cx="36" cy="'+y+'" rx="'+rx+'" ry="'+ry+'" fill="'+cfg.line+'"/><ellipse cx="64" cy="'+y+'" rx="'+rx+'" ry="'+ry+'" fill="'+cfg.line+'"/>';
+  return '<svg class="mascot mascot-bob" data-face="happy" viewBox="0 0 100 100" width="'+size+'" height="'+size+'" aria-hidden="true">'+cfg.extra+'<circle cx="50" cy="52" r="45" fill="'+cfg.fill+'" stroke="'+cfg.line+'" stroke-width="3"/>'+
+    '<g class="mascot-expression mascot-happy">'+eyes(40,5,8)+'<path d="M27 58Q50 84 73 58" fill="none" stroke="'+cfg.line+'" stroke-width="5" stroke-linecap="round"/><path d="M37 67Q50 77 63 67" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>'+
+    '<g class="mascot-expression mascot-surprise">'+eyes(38,6,9)+'<ellipse cx="50" cy="67" rx="8" ry="11" fill="'+cfg.line+'"/><ellipse cx="50" cy="64" rx="3" ry="4" fill="#fff"/></g>'+
+    '<g class="mascot-expression mascot-sleepy"><path d="M27 40q9 9 18 0M55 40q9 9 18 0" fill="none" stroke="'+cfg.line+'" stroke-width="5" stroke-linecap="round"/><path d="M39 66q11-8 22 0" fill="none" stroke="'+cfg.line+'" stroke-width="5" stroke-linecap="round"/><path d="M74 22q4-8 9 0t9 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>'+
+    '<g class="mascot-expression mascot-horror"><path d="m25 35 19 6M75 35l-19 6" stroke="#451326" stroke-width="6" stroke-linecap="round"/><ellipse cx="36" cy="47" rx="7" ry="9" fill="#FF3158"/><ellipse cx="64" cy="47" rx="7" ry="9" fill="#FF3158"/><ellipse cx="36" cy="48" rx="2.5" ry="5" fill="#210D1A"/><ellipse cx="64" cy="48" rx="2.5" ry="5" fill="#210D1A"/><path d="M29 62Q50 52 71 62L67 77 61 72 56 80 50 73 44 80 39 72 33 77Z" fill="#351020" stroke="#451326" stroke-width="3" stroke-linejoin="round"/><path d="m38 60 4 9 4-11M55 58l4 11 4-9" fill="#FFF2E8" stroke="#FFF2E8" stroke-width="2" stroke-linejoin="round"/><path d="M22 57l5 4M78 57l-5 4" stroke="#FF3158" stroke-width="3" stroke-linecap="round"/></g></svg>'
+}
+const MASCOT_FACES=['happy','surprise','sleepy'];
+let mascotFaceIndex=0;
+setInterval(()=>{
+  const faces=document.documentElement.dataset.theme==='halloween'?MASCOT_FACES.concat('horror'):MASCOT_FACES;
+  mascotFaceIndex=(mascotFaceIndex+1)%faces.length;
+  $$('.mascot').forEach(el=>el.dataset.face=faces[mascotFaceIndex]);
+},2200);
 function renderPath(){
   const co=COURSES.find(c=>c.id===S.course)||COURSES[0],cid=co.id;
   const cf=courseFlat(cid),cur=cf.findIndex(f=>!S.done[f.id]);
@@ -1678,11 +1843,11 @@ function renderPath(){
   us.forEach((x,k)=>{
     const u=x.u,dn=u.lessons.filter(l=>S.done[l.id]).length;
     const hasCur=cur>=0&&u.lessons.some(l=>l.id===cf[cur].id),key=cid+k,isOpen=openU[key]!==undefined?openU[key]:(hasCur||(cur===-1&&k===0));
-    h+='<section class="unit'+(isOpen?' open':'')+'" style="--uc:var(--u'+u.c+')"><button class="uh" data-act="unit" data-k="'+key+'" aria-expanded="'+isOpen+'"><span class="un">Раздел '+(k+1)+' · '+dn+'/'+u.lessons.length+'</span><h2>'+u.title+'</h2><p>'+u.desc+'</p><span class="thin" style="display:block"><i style="width:'+Math.round(dn/u.lessons.length*100)+'%"></i></span></button><ol class="lessons">';
+    h+='<section class="unit'+(isOpen?' open':'')+'" data-unit-key="'+key+'" style="--uc:var(--u'+u.c+')"><button class="uh" data-act="unit" data-k="'+key+'" aria-expanded="'+isOpen+'"><span class="un">Раздел '+(k+1)+' · '+dn+'/'+u.lessons.length+'</span><h2>'+u.title+'</h2><p>'+u.desc+'</p><span class="thin" style="display:block"><i style="width:'+Math.round(dn/u.lessons.length*100)+'%"></i></span></button><ol class="lessons">';
     u.lessons.forEach((l,j)=>{
-      const i=gi++,st=S.done[l.id]?'done':(i===cur?'cur':(ME&&ME.admin?'open':'locked')),off=Math.round(Math.sin(z++*.95)*64);
+      const i=gi++,st=S.done[l.id]?'done':(i===cur?'cur':(u.custom||ME&&ME.admin?'open':'locked')),off=Math.round(Math.sin(z++*.95)*64);
       const ic=svg(st==='done'?'check':(st==='cur'||st==='open')?'star':'lock');
-      h+='<li class="tn st-'+st+'" style="--o:'+off+'px">'+(i%8===3?'<span class="mas '+(off>0?'L':'R')+'" aria-hidden="true">'+smiler(72)+'</span>':'')+(st==='cur'?'<span class="go">Начать</span>':'')+'<button class="nd" data-act="lesson" data-id="'+l.id+'" aria-label="'+esc(l.title)+', '+(st==='done'?'пройден, повторить':st==='cur'?'следующий урок':st==='open'?'открыт (админ)':'закрыт')+'">'+ic+'</button><span class="nl">'+l.title+'</span></li>';
+      h+='<li class="tn st-'+st+'" style="--o:'+off+'px">'+(i%8===3?'<span class="mas '+(off>0?'L':'R')+'" aria-hidden="true">'+smiler(72)+'</span>':'')+(st==='cur'?'<span class="go">Начать</span>':'')+'<button class="nd" data-act="lesson" data-id="'+l.id+'" aria-label="'+esc(l.title)+', '+(st==='done'?'пройден, повторить':st==='cur'?'следующий урок':st==='open'?(u.custom?'авторский курс':'открыт администратором'):'закрыт')+'">'+ic+'</button><span class="nl">'+l.title+'</span></li>';
       if((j+1)%4===0&&j<u.lessons.length-1){const bd=(j+1)%8===0;h+='<li class="tn bonus'+(!bd&&S.daily.d===today()?' st-done':'')+'" style="--o:'+Math.round(Math.sin(z++*.95)*64)+'px"><button class="nd" data-act="'+(bd?'blitz':'daily')+'" aria-label="'+(bd?'Блиц на 60 секунд':'Разминка дня')+'">'+(bd?'⚡':'🏋️')+'</button><span class="nl">'+(bd?'Блиц':'Разминка')+'</span></li>'}
     });
     {const bz=unitDone(x.ui)||(ME&&ME.admin);h+='<li class="tn boss'+(bz?'':' st-locked')+'" style="--o:0px"><button class="nd" data-act="boss" data-ui="'+x.ui+'" aria-label="Босс раздела'+(bz?'':', закрыт')+'">'+(bz?smiler(58):svg('lock'))+'</button><span class="nl">Босс раздела</span></li>'}
@@ -1697,15 +1862,207 @@ let pview='hub',tq='',tc='all';
 function pcard(icon,color,title,text,action){return '<div class="pc" style="--c:'+color+'"><span class="pi">'+svg(icon)+'</span><h3>'+title+'</h3><p>'+text+'</p>'+action+'</div>'}
 function renderPractice(){
   if(pview==='terms'){renderTerms();return}
+  if(pview==='duel'){renderDuel();return}
   const wc=weakCount(),dd=S.daily.d===today();
-  let h='<h2 class="vt">Практика</h2>'+factCard()+'<div class="pgrid">';
+  const weakByCourse=weakCourseCounts(),focusCourse=Object.keys(weakByCourse).sort((a,b)=>weakByCourse[b]-weakByCourse[a])[0];
+  const focusCourseName=focusCourse&&(COURSES.find(c=>c.id===focusCourse)||{}).title;
+  const plan=wc
+    ?{icon:'repeat',title:'Закрепи сложные вопросы',text:'Есть '+wc+' '+pl(wc,['ошибка для повтора','ошибки для повтора','ошибок для повтора'])+'. '+(focusCourseName?'Больше всего ошибок в направлении «'+focusCourseName+'». ':'')+'Повтори их без потери сердечек.',action:focusCourse?'review-course':'review',course:focusCourse,label:focusCourse?'Повторить: '+focusCourseName:'Разобрать ошибки'}
+    :!dd
+      ?{icon:'sun',title:'Начни с разминки',text:'Пять коротких вопросов из разных тем помогут вспомнить изученное.',action:'daily',label:'Начать разминку'}
+      :{icon:'timer',title:'Проверь себя в блице',text:'Разминка готова. Закрепи знания и попробуй улучшить свой рекорд.',action:'blitz',label:'Играть в блиц'};
+  const xp=Math.max(0,S.day.xp),goal=Math.max(1,S.goal),progress=Math.min(100,Math.round(xp/goal*100));
+  let h='<h2 class="vt">Практика</h2><section class="card practice-plan" aria-label="Рекомендация для практики"><div class="practice-plan-top"><span class="pi">'+svg(plan.icon)+'</span><div class="practice-plan-copy"><h2>Твой следующий шаг</h2><p><b>'+plan.title+'</b> · '+plan.text+'</p></div></div><div class="practice-progress" role="progressbar" aria-label="Прогресс дневной цели" aria-valuemin="0" aria-valuemax="'+goal+'" aria-valuenow="'+Math.min(xp,goal)+'"><i style="width:'+progress+'%"></i></div><div class="practice-plan-foot"><span class="sub">Сегодня: <b>'+xp+' / '+goal+' XP</b></span><button class="btn sm" data-act="'+plan.action+'"'+(plan.course?' data-course="'+plan.course+'"':'')+'>'+plan.label+'</button></div></section>'+factCard()+'<div class="pgrid">';
   h+=pcard('sun','var(--sun)','Разминка дня',dd?'Сегодня уже выполнена. Новая будет завтра.':'5 вопросов из разных тем. Награда: +15 XP, если без ошибок +20.',dd?'<span class="badge ok">'+svg('check')+'Готово</span>':'<button class="btn sun" data-act="daily">Начать</button>');
   h+=pcard('timer','var(--u3)','Блиц','60 секунд, вопросы с выбором. 1 верный ответ = 1 XP.'+(S.blitz?' Рекорд: '+S.blitz+'.':''),'<button class="btn" data-act="blitz">Играть</button>');
   h+=pcard('search','var(--heart)','Найди ошибки · Марафон','5 жизней, бесконечные уровни, каждый раз новый вид заданий. Ошибок в раунде немного. За топ недели даём призы.'+(fvBest()?' Рекорд: '+fvBest()+'.':''),'<button class="btn" data-act="five">Играть</button>');
+  h+=pcard('trophy','var(--sun)','Дуэль с другом','Вызови соперника по коду, отвечайте на одинаковые вопросы и следите за прогрессом друг друга в реальном времени.','<button class="btn sun" data-act="duel-hub">Создать вызов</button>');
   h+=pcard('repeat','var(--u4)','Работа над ошибками',wc?'Вопросы, где ты ошибся: '+wc+'. Сердечки не тратятся.':'Ошибок для повторения нет.',wc?'<button class="btn" data-act="review">Повторить</button>':'<span class="badge">Всё чисто</span>');
   h+=pcard('book','var(--u1)','Словарь','Термины и понятия из уроков: '+TERMS.length+'. Есть поиск.','<button class="btn ghost" data-act="terms">Открыть</button>');
   h+='</div>'+fvTopCard()+'<div class="card"><h2>Заморозки серии</h2><p class="sub">Заморозка сама сохраняет серию, если ты пропустил ровно один день. Её дают за каждые 4 новых урока, хранится до двух. Сейчас: <b class="mono">'+S.freezes+'</b>. До следующей: '+(4-S.sinceFz)+' '+pl(4-S.sinceFz,['урок','урока','уроков'])+'.</p></div>';
   $('#v-practice').innerHTML=h;
+}
+let DUEL={id:'',room:null,unsub:null,uid:'',error:'',playing:''};
+function duelHasCloud(){return !!(FS&&FA&&FA.currentUser&&ME&&!ME.guest)}
+function duelStopListening(){if(DUEL.unsub){DUEL.unsub();DUEL.unsub=null}}
+function duelLeave(){
+  duelStopListening();DUEL={id:'',room:null,unsub:null,uid:'',error:'',playing:''};pview='hub';renderPractice();
+}
+function duelPlayerRows(){
+  const room=DUEL.room;if(!room)return '';
+  return Object.keys(room.players||{}).map(uid=>{
+    const p=room.players[uid],mine=uid===DUEL.uid,done=!!p.finished,progress=Math.max(0,Math.min(100,Math.round((p.progress||0)/(room.total||8)*100)));
+    return '<div class="duel-row"><span class="av">'+esc(initial(p.name||'Игрок'))+'</span><span style="flex:1;min-width:0"><b>'+esc(p.name||'Игрок')+(mine?' · ты':'')+'</b><small class="sub">'+(done?'Финиш · '+(p.correct||0)+' правильных':(p.progress||0)+' из '+(room.total||8)+' заданий')+'</small><span class="duel-track"><i style="width:'+progress+'%"></i></span></span></div>';
+  }).join('');
+}
+function duelStatusText(){
+  const r=DUEL.room;if(!r)return '';
+  if(r.status==='waiting')return 'Ждём соперника. Отправь ему код вызова.';
+  if(r.status==='playing'){
+    const count=Object.keys(r.players||{}).length;
+    if(count<2)return 'Соперник отключился. Ожидается второй игрок.';
+    const complete=Object.values(r.players||{}).filter(p=>p.finished).length;
+    return complete?'Один игрок финишировал — ждём результат соперника.':'Матч идёт: ответы и прогресс синхронизируются.';
+  }
+  if(r.status==='finished'){
+    if(!r.winner)return 'Ничья! У обоих одинаковый результат.';
+    return r.winner===DUEL.uid?'Ты победил! Отличная работа.':'Соперник победил в этой дуэли.';
+  }
+  return 'Вызов истёк.';
+}
+function renderDuel(){
+  const room=DUEL.room,joined=room&&room.players&&room.players[DUEL.uid];
+  let h='<button class="back" data-act="duel-back">'+svg('back')+'Практика</button><h2 class="vt">Дуэль знаний</h2>';
+  if(!duelHasCloud()){
+    h+='<div class="card duel-card"><h2>Для дуэли нужен облачный аккаунт</h2><p class="sub">Сначала войди или создай аккаунт с подключением к Firebase. Гостевой режим и аккаунты без облачной авторизации не могут синхронизировать матч с соперником.</p><button class="btn ghost" data-act="logout">Сменить аккаунт</button></div>';
+  }else if(!room){
+    h+='<div class="card duel-card"><h2>Пригласи соперника</h2><p class="sub">Будет выбран общий набор из 8 вопросов. Побеждает игрок с большим числом правильных ответов; если счёт равен — тот, кто закончил раньше.</p><button class="btn sun" data-act="duel-create">Создать вызов</button><label class="l" for="duel-code">Или введи код от соперника</label><input id="duel-code" class="inp" maxlength="6" autocomplete="off" placeholder="Например, A7K4PQ"><button class="btn ghost" style="margin-top:10px" data-act="duel-join">Присоединиться</button><p class="sub" style="margin-top:14px">Подсчёт сейчас выполняется в браузере участников. Для защищённого от подмены результата понадобится серверная проверка.</p></div>';
+  }else{
+    const host=room.host===DUEL.uid,players=Object.keys(room.players||{}).length;
+    h+='<div class="card duel-card"><h2>'+esc(room.title||'Вызов сопернику')+'</h2><p class="sub">'+(room.status==='waiting'?'Поделись кодом с другом:':'Состояние и прогресс матча обновляются автоматически.')+'</p>'+
+      (room.status==='waiting'?'<p class="duel-code" aria-label="Код вызова">'+esc(DUEL.id)+'</p><button class="btn ghost sm" data-act="duel-copy">Скопировать код</button>':'')+
+      '<div style="margin-top:14px"><p class="sub">Соперники · '+players+' / 2</p>'+duelPlayerRows()+'</div><div class="duel-state" role="status">'+esc(duelStatusText())+'</div>'+
+      (room.status==='waiting'&&host?'<button class="btn wide" style="margin-top:12px" data-act="duel-start"'+(players<2?' disabled':'')+'>Начать дуэль</button>':'')+
+      (room.status==='playing'&&joined&&!joined.finished&&!DUEL.playing?'<button class="btn wide" style="margin-top:12px" data-act="duel-resume">Продолжить матч</button>':'')+
+      (room.status==='finished'||room.status==='expired'?'<button class="btn ghost wide" style="margin-top:12px" data-act="duel-new">Новая дуэль</button>':'')+
+      (DUEL.error?'<p class="err" role="alert">'+esc(DUEL.error)+'</p>':'')+
+      '<button class="btn ghost wide" style="margin-top:8px" data-act="duel-back">Закрыть</button></div>';
+  }
+  if(DUEL.error&&!room)h+='<p class="err" role="alert">'+esc(DUEL.error)+'</p>';
+  $('#v-practice').innerHTML=h;
+}
+function duelSubscribe(code){
+  duelStopListening();DUEL.id=code;
+  DUEL.unsub=FS.collection('challenges').doc(code).onSnapshot(doc=>{
+    if(!doc.exists){DUEL.error='Комната не найдена или уже удалена.';DUEL.room=null;renderPractice();return}
+    DUEL.room=doc.data();
+    if(!DUEL.room.players||!DUEL.room.players[DUEL.uid]){DUEL.error='У тебя нет доступа к этой комнате.';renderPractice();return}
+    DUEL.error='';renderPractice();
+    duelUpdateLiveUi();
+    if(DUEL.room.status==='playing'&&!DUEL.room.players[DUEL.uid].finished&&DUEL.playing!==code&&!DUEL.paused)duelBegin();
+    if(DUEL.room.status==='finished'&&L&&L.mode==='challenge'&&L.state==='result')duelDrawResult();
+    duelMaybeResolve();
+  },err=>{
+    DUEL.error='Не удалось синхронизировать матч. Проверь подключение и доступ Firestore: '+(err&&err.code==='permission-denied'?'нет разрешения для challenges.':'соединение потеряно.');
+    renderPractice();
+  });
+}
+async function duelCreate(){
+  if(!duelHasCloud()){renderPractice();return}
+  const pool=ALLQ.filter(x=>(x.q.t==='c'||x.q.t==='tf')&&!x.q.branch);
+  if(pool.length<8){DUEL.error='Недостаточно вопросов для матча.';renderPractice();return}
+  const uid=FA.currentUser.uid,questions=shuffle(pool).slice(0,8).map(x=>JSON.parse(JSON.stringify(x.q)));
+  try{
+    const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    let code,created=false;
+    for(let attempt=0;attempt<5&&!created;attempt++){
+      code='';for(let i=0;i<6;i++)code+=chars[Math.floor(Math.random()*chars.length)];
+      const now=Date.now(),room={host:uid,createdAt:now,expiresAt:now+30*60*1000,status:'waiting',title:'Дуэль знаний',total:questions.length,quiz:questions,players:{[uid]:{name:ME.name,progress:0,correct:0,wrong:0,finished:false,joinedAt:now}}};
+      try{
+        await FS.runTransaction(async tx=>{
+          const ref=FS.collection('challenges').doc(code),snap=await tx.get(ref);
+          if(snap.exists)throw new Error('code-collision');
+          tx.set(ref,room);
+        });
+        created=true;
+      }catch(e){if(e.message!=='code-collision')throw e}
+    }
+    if(!created)throw new Error('code-allocation-failed');
+    DUEL.uid=uid;DUEL.error='';duelSubscribe(code);
+  }catch(e){DUEL.error='Не удалось создать вызов. Firebase Firestore должен разрешать авторизованным пользователям доступ к challenges.';renderPractice()}
+}
+async function duelJoin(){
+  if(!duelHasCloud()){renderPractice();return}
+  const code=String($('#duel-code')&&$('#duel-code').value||'').trim().toUpperCase();
+  if(!/^[A-HJ-NP-Z2-9]{6}$/.test(code)){DUEL.error='Введи шестизначный код вызова.';renderPractice();return}
+  const uid=FA.currentUser.uid,ref=FS.collection('challenges').doc(code);
+  try{
+    await FS.runTransaction(async tx=>{
+      const snap=await tx.get(ref);if(!snap.exists)throw new Error('not-found');
+      const room=snap.data(),players=room.players||{};
+      if(room.status!=='waiting'||room.expiresAt<Date.now())throw new Error('closed');
+      if(Object.keys(players).length>=2&&!players[uid])throw new Error('full');
+      if(players[room.host]&&room.host===uid)throw new Error('self');
+      tx.update(ref,{['players.'+uid]:{name:ME.name,progress:0,correct:0,finished:false,joinedAt:Date.now()}});
+    });
+    DUEL.uid=uid;DUEL.error='';duelSubscribe(code);
+  }catch(e){
+    DUEL.error=e.message==='not-found'?'Код не найден. Проверь его и попробуй ещё раз.':e.message==='closed'?'Этот вызов уже начался или истёк.':e.message==='full'?'В вызове уже есть два игрока.':e.message==='self'?'Нельзя присоединиться к собственному вызову.':'Не удалось присоединиться. Проверь подключение и правила доступа Firebase.';
+    renderPractice();
+  }
+}
+async function duelStart(){
+  if(!DUEL.room||DUEL.room.host!==DUEL.uid||Object.keys(DUEL.room.players||{}).length!==2)return;
+  if(DUEL.room.expiresAt<Date.now()){
+    try{await FS.collection('challenges').doc(DUEL.id).update({status:'expired'})}
+    catch(e){DUEL.error='Вызов истёк, но не удалось обновить его состояние.';renderPractice()}
+    return;
+  }
+  try{await FS.collection('challenges').doc(DUEL.id).update({status:'playing',startedAt:Date.now()})}
+  catch(e){DUEL.error='Не удалось начать матч. Проверь разрешения Firestore.';renderPractice()}
+}
+function duelBegin(){
+  const r=DUEL.room;if(!r||r.status!=='playing'||DUEL.playing===DUEL.id)return;
+  const me=r.players&&r.players[DUEL.uid];if(!me||me.finished)return;
+  DUEL.playing=DUEL.id;DUEL.paused=false;
+  const progress=Math.min(r.quiz.length,me.progress||0);
+  L={mode:'challenge',practice:true,duelId:DUEL.id,queue:r.quiz.slice(progress).map((q,i)=>({q,lid:'duel-'+DUEL.id,qi:progress+i,retry:true})),total:r.quiz.length,right:me.correct||0,mistakes:me.wrong||0,state:'ask',fail:false,cur:null};
+  setBlitzUI(false);openLesson();nextQ();
+}
+function duelProgressUpdate(){
+  if(!L||L.mode!=='challenge')return;
+  const progress=L.right+L.mistakes,uid=DUEL.uid,code=L.duelId;
+  FS.collection('challenges').doc(code).update({['players.'+uid+'.progress']:progress,['players.'+uid+'.correct']:L.right,['players.'+uid+'.wrong']:L.mistakes})
+    .catch(()=>{DUEL.error='Не удалось обновить прогресс в матче.';renderPractice()});
+  const node=$('#duel-live-progress');if(node)node.textContent=progress+' / '+L.total;
+}
+function duelUpdateLiveUi(){
+  const node=$('#duel-live-progress');
+  if(node&&L&&L.mode==='challenge')node.textContent=(L.right+L.mistakes)+' / '+L.total;
+  const rows=$('#lbody .duel-live .sub');
+  if(rows)rows.innerHTML=duelPlayerRows();
+}
+async function duelFinish(){
+  if(!L||L.mode!=='challenge'||L.state==='result')return;
+  L.state='result';DUEL.playing='';
+  L.submitFailed=false;
+  await duelSubmitFinal();
+}
+async function duelSubmitFinal(){
+  if(!L||L.mode!=='challenge'||L.state!=='result')return;
+  const uid=DUEL.uid,code=L.duelId,score=L.right,progress=L.total;
+  try{
+    await FS.collection('challenges').doc(code).update({['players.'+uid+'.progress']:progress,['players.'+uid+'.correct']:score,['players.'+uid+'.wrong']:L.mistakes,['players.'+uid+'.finished']:true,['players.'+uid+'.finishedAt']:Date.now()});
+    L.submitFailed=false;L.submitted=true;DUEL.error='';setTimeout(duelMaybeResolve,45000);
+  }catch(e){L.submitFailed=true;DUEL.error='Не удалось отправить итог. Нажми «Повторить отправку», когда соединение восстановится.';renderPractice()}
+  duelDrawResult();
+}
+function duelDrawResult(){
+  if(!L||L.mode!=='challenge'||L.state!=='result')return;
+  const room=DUEL.room,done=room&&room.status==='finished';
+  $('#lbody').className='wrap-s';
+  $('#lbody').innerHTML='<div class="res"><div class="burst">'+svg(done?(room.winner===DUEL.uid?'trophy':'close'):'timer')+'</div><h2>'+(done?(room.winner===DUEL.uid?'Ты победил!':room.winner?'Победил соперник':'Ничья!'):'Ответы отправлены')+'</h2><p class="sub">'+(L.submitFailed?DUEL.error:done?'Матч завершён автоматически.':'Ждём соперника. Его прогресс виден в комнате дуэли.')+'</p>'+resTiles(['Твой счёт',L.right],['Всего вопросов',L.total],['Прогресс соперника',room&&room.players?((Object.values(room.players).find(p=>p!==room.players[DUEL.uid])||{}).progress||0):0])+'</div>';
+  setBar(100);lessonHearts();resultFoot(L.submitFailed?'Повторить отправку':'К дуэли');
+}
+function duelMaybeResolve(){
+  const r=DUEL.room;if(!r||r.status!=='playing')return;
+  const players=Object.values(r.players||{}),finished=players.filter(p=>p.finished);
+  const should=finished.length===2||finished.length===1&&Date.now()-(finished[0].finishedAt||Date.now())>=45000;
+  if(!should)return;
+  FS.runTransaction(async tx=>{
+    const ref=FS.collection('challenges').doc(DUEL.id),snap=await tx.get(ref);
+    if(!snap.exists||snap.data().status!=='playing')return;
+    const current=snap.data(),rows=Object.entries(current.players||{}),done=rows.filter(([,p])=>p.finished);
+    const expired=done.length===1&&Date.now()-(done[0][1].finishedAt||Date.now())>=45000;
+    if(done.length<2&&!expired)return;
+    let winner=null;
+    if(done.length===1)winner=done[0][0];
+    else{
+      done.sort((a,b)=>(b[1].correct||0)-(a[1].correct||0)||(a[1].finishedAt||0)-(b[1].finishedAt||0));
+      if((done[0][1].correct||0)!==(done[1][1].correct||0)||(done[0][1].finishedAt||0)!==(done[1][1].finishedAt||0))winner=done[0][0];
+    }
+    tx.update(ref,{status:'finished',winner:winner,finishedAt:Date.now()});
+  }).catch(()=>{DUEL.error='Не удалось определить победителя. Проверь разрешения Firebase.';renderPractice()});
 }
 function termsList(){
   const q=tq.trim().toLowerCase();
@@ -1796,7 +2153,7 @@ function renderProfile(){
   h+=styleCard();
   h+='<div class="card"><h2>Настройки</h2>'+
     '<div class="setrow first"><span>Цель дня<small>Сколько XP нужно, чтобы поднять солнце</small></span><div class="seg" role="group" aria-label="Цель дня">'+GOALS.map(g=>'<button data-act="setgoal" data-g="'+g[0]+'" aria-pressed="'+(S.goal===g[0])+'">'+g[0]+'</button>').join('')+'</div></div>'+
-    '<div class="setrow"><span>Тема оформления</span><div class="seg" role="group" aria-label="Тема оформления">'+[['system','Авто'],['light','Светлая'],['dark','Тёмная']].map(t=>'<button data-act="theme" data-th="'+t[0]+'" aria-pressed="'+(th===t[0])+'">'+t[1]+'</button>').join('')+'</div></div>'+
+    '<div class="setrow"><span>Тема оформления<small>Выбери настроение приложения — настройка сохраняется на этом устройстве</small></span><div class="theme-grid" role="group" aria-label="Тема оформления">'+THEMES.map(t=>'<button class="theme-choice" data-act="theme" data-th="'+t[0]+'" aria-pressed="'+(th===t[0])+'"><i class="theme-dot" style="--dot-a:'+t[2]+';--dot-b:'+t[3]+'" aria-hidden="true"></i>'+t[1]+'</button>').join('')+'</div></div>'+
     '<div class="setrow"><span>Звуки и вибрация</span><div class="seg" role="group" aria-label="Звуки"><button data-act="snd" data-s="1" aria-pressed="'+S.sound+'">Вкл</button><button data-act="snd" data-s="0" aria-pressed="'+(!S.sound)+'">Выкл</button></div></div>'+
     '<div class="setrow"><span>Сердечки: '+S.hearts+' из '+MAXH+'<small>'+(S.hearts<MAXH?'Следующее вернётся через <span class="mono" data-timer>'+mmss(nextHeartIn())+'</span>':'Все на месте')+'</small></span></div>'+
     '<div class="setrow"><span>Как пользоваться<small>Короткая инструкция по приложению</small></span><button class="btn ghost sm" data-act="tour">Открыть</button></div><div class="setrow"><span>Поделиться результатом</span><button class="btn ghost sm" data-act="share">Поделиться</button></div>'+
@@ -1957,14 +2314,233 @@ function renderAdmin(){
     '</div>';
   $('#v-admin').innerHTML=h;
 }
-function renderAll(){applyPersonal();renderHdr();renderNav();renderPath();renderPractice();renderLeague();renderProfile();if(ME&&ME.admin)renderAdmin()}
+let ST={course:'future',uid:'',title:'',desc:'',lessonTitle:'',published:false,qs:[],err:'',source:''};
+let studioLoadedFor='';
+let studioDraftTimer=0;
+const studioDraftKey=()=> 'gz2-studio-draft-'+(ME?ME.id:'');
+function studioBlankQ(t){return t==='tf'?{t:'tf',q:'',a:true,e:''}:{t:'c',q:'',o:['','','',''],a:0,e:''}}
+function studioReset(course){ST={course:course||'future',uid:'',title:'',desc:'',lessonTitle:'',published:false,qs:[],err:'',source:''}}
+function studioSaveDraft(){
+  if(!ME)return;
+  clearTimeout(studioDraftTimer);
+  studioDraftTimer=setTimeout(()=>{
+    const hasContent=ST.title||ST.desc||ST.lessonTitle||ST.source||ST.qs.some(q=>q.q||q.e||(q.o||[]).some(Boolean));
+    if(!hasContent){lsDel(studioDraftKey());return}
+    lsSet(studioDraftKey(),JSON.stringify({course:ST.course,uid:ST.uid,title:ST.title,desc:ST.desc,lessonTitle:ST.lessonTitle,published:ST.published,source:ST.source,qs:ST.qs}));
+    const status=$('#studio-draft-status');if(status)status.textContent='Черновик сохранён на этом устройстве';
+  },250);
+}
+function studioRestoreDraft(){
+  if(!ME||studioLoadedFor===ME.id)return;
+  studioLoadedFor=ME.id;
+  try{
+    const d=JSON.parse(lsGet(studioDraftKey())||'null');
+    if(!d||typeof d!=='object'||!Array.isArray(d.qs)||d.qs.length>30)return;
+    const ownedCourse=CUSTOM.find(u=>u.uid===d.uid&&u.author===ME.id);
+    ST={course:COURSES.some(c=>c.id===d.course)?d.course:'future',uid:ownedCourse?ownedCourse.uid:'',title:String(d.title||'').slice(0,120),desc:String(d.desc||'').slice(0,240),lessonTitle:String(d.lessonTitle||'').slice(0,120),published:d.published===true,source:String(d.source||'').slice(0,100),err:'',qs:d.qs.map((q,i)=>{
+      const branch=q&&q.branch&&typeof q.branch==='object'?{correct:q.branch.correct,wrong:q.branch.wrong}:null;
+      if(branch)for(const k of ['correct','wrong'])if(branch[k]!==null&&branch[k]!==-1&&(!Number.isInteger(branch[k])||branch[k]<=i||branch[k]>=d.qs.length))branch[k]=null;
+      if(q&&q.t==='tf')return {t:'tf',q:String(q.q||'').slice(0,600),a:q.a===true,e:String(q.e||'').slice(0,600),branch:branch||undefined};
+      const n=q&&Array.isArray(q.o)?q.o:[];
+      return {t:'c',q:String(q&&q.q||'').slice(0,600),o:[0,1,2,3].map(k=>String(n[k]||'').slice(0,300)),a:Number.isInteger(q&&q.a)?Math.max(0,Math.min(3,q.a)):0,e:String(q&&q.e||'').slice(0,600),branch:branch||undefined};
+    })};
+  }catch(e){lsDel(studioDraftKey())}
+}
+function studioSync(){
+  const g=id=>$('#'+id);
+  if(g('st-course'))ST.course=g('st-course').value;
+  if(g('st-title'))ST.title=g('st-title').value;
+  if(g('st-desc'))ST.desc=g('st-desc').value;
+  if(g('st-lesson'))ST.lessonTitle=g('st-lesson').value;
+  if(g('st-published'))ST.published=g('st-published').checked;
+  if(g('st-topic'))ST.source=g('st-topic').value;
+  ST.qs.forEach((q,i)=>{
+    const text=g('st-q-'+i),ex=g('st-ex-'+i),type=g('st-type-'+i);
+    if(text)q.q=text.value;if(ex)q.e=ex.value;
+    if(type&&type.value!==q.t){
+      const next=studioBlankQ(type.value);next.q=q.q;next.e=q.e;next.branch=q.branch;
+      q=ST.qs[i]=next;
+    }
+    if(q.t==='c'){
+      q.o=q.o.map((v,k)=>g('st-o-'+i+'-'+k)?.value??v);
+      const a=g('st-a-'+i);if(a)q.a=+a.value;
+    }else{const a=g('st-a-'+i);if(a)q.a=a.value==='true'}
+    const yes=g('st-by-'+i),no=g('st-bn-'+i);
+    if(yes||no){
+      q.branch={correct:yes&&yes.value!==''?+yes.value:null,wrong:no&&no.value!==''?+no.value:null};
+      if(q.branch.correct===null&&q.branch.wrong===null)delete q.branch;
+    }
+  });
+  studioSaveDraft();
+}
+function studioBranchOptions(i,value){
+  return '<option value="">Продолжить дальше</option><option value="-1"'+(value===-1?' selected':'')+'>Завершить урок</option>'+
+    ST.qs.map((_,n)=>n>i?'<option value="'+n+'"'+(value===n?' selected':'')+'>Перейти к вопросу '+(n+1)+'</option>':'').join('');
+}
+function studioQuestion(q,i){
+  const yes=q.branch&&q.branch.correct,no=q.branch&&q.branch.wrong;
+  let h='<article class="studio-q" draggable="true" data-st-q="'+i+'"><div class="studio-qhead"><span class="studio-drag" aria-hidden="true">⠿ ПЕРЕТАЩИТЬ</span><b>Задание '+(i+1)+'</b><span class="studio-qtools">'+
+    '<button type="button" class="btn ghost sm" data-act="studio-moveq" data-i="'+i+'" data-d="-1" aria-label="Переместить задание вверх"'+(i===0?' disabled':'')+'>↑</button>'+
+    '<button type="button" class="btn ghost sm" data-act="studio-moveq" data-i="'+i+'" data-d="1" aria-label="Переместить задание вниз"'+(i===ST.qs.length-1?' disabled':'')+'>↓</button>'+
+    '<button type="button" class="btn ghost sm" data-act="studio-rmq" data-i="'+i+'" aria-label="Удалить задание">'+svg('trash')+'</button></span></div>'+
+    '<label class="l" for="st-q-'+i+'">Текст задания</label><textarea id="st-q-'+i+'" class="inp" rows="2" maxlength="600">'+esc(q.q)+'</textarea>'+
+    '<label class="l" for="st-type-'+i+'">Формат ответа</label><select class="inp" id="st-type-'+i+'"><option value="c"'+(q.t==='c'?' selected':'')+'>Выбор ответа</option><option value="tf"'+(q.t==='tf'?' selected':'')+'>Верно / неверно</option></select>';
+  if(q.t==='c'){
+    h+='<label class="l">Варианты ответа и правильный вариант</label><div class="studio-options">'+q.o.map((o,k)=>'<input class="inp" id="st-o-'+i+'-'+k+'" maxlength="300" aria-label="Вариант '+(k+1)+'" placeholder="Вариант '+(k+1)+'" value="'+esc(o)+'">').join('')+'</div>'+
+      '<label class="l" for="st-a-'+i+'">Правильный ответ</label><select class="inp" id="st-a-'+i+'">'+q.o.map((_,k)=>'<option value="'+k+'"'+(q.a===k?' selected':'')+'>Вариант '+(k+1)+'</option>').join('')+'</select>';
+  }else{
+    h+='<label class="l">Верный ответ</label><select class="inp" id="st-a-'+i+'"><option value="true"'+(q.a===true?' selected':'')+'>Верно</option><option value="false"'+(q.a===false?' selected':'')+'>Неверно</option></select>';
+  }
+  h+='<label class="l" for="st-ex-'+i+'">Объяснение ответа</label><textarea id="st-ex-'+i+'" class="inp" rows="2" maxlength="600">'+esc(q.e)+'</textarea>'+
+    '<div class="studio-branch"><div><label class="l" for="st-by-'+i+'">Если ответ верный</label><select class="inp" id="st-by-'+i+'">'+studioBranchOptions(i,yes)+'</select></div><div><label class="l" for="st-bn-'+i+'">Если ответ неверный</label><select class="inp" id="st-bn-'+i+'">'+studioBranchOptions(i,no)+'</select></div></div></article>';
+  return h;
+}
+function renderStudio(){
+  studioRestoreDraft();
+  const own=CUSTOM.filter(u=>u.author===(ME&&ME.id));
+  const visible=CUSTOM.filter(u=>u.published!==false||u.author===(ME&&ME.id));
+  const active=own.find(u=>u.uid===ST.uid);
+  if(ST.uid&&!active)studioReset(ST.course);
+  let h='<h2 class="vt">Студия курсов</h2><section class="card studio-hero"><span class="tour-ic">'+svg('book')+'</span><div><h2>Преврати идею в урок</h2><p class="sub">Черновик сохраняется автоматически в этом браузере. Чтобы создать курс, заполни название, урок и хотя бы одно задание, затем нажми «Сохранить курс и урок». После этого курс появится в списке. Черновики видны только тебе на этом устройстве.</p><div class="studio-toolbar"><button class="btn sm" data-act="studio-new">Начать создание курса</button><button class="btn ghost sm" data-act="studio-import">Импортировать курс кодом</button><button class="btn ghost sm" data-act="studio-import-file">Загрузить JSON-файл</button><input id="st-import-file" type="file" accept=".json,application/json" hidden></div></div></section>';
+  h+='<section class="card"><h2>Курсы сообщества и мои курсы</h2><p class="sub">Опубликованные курсы доступны всем аккаунтам в этом браузере. Чтобы передать курс на другое устройство, используй код публикации.</p>';
+  h+=visible.length?'<div class="studio-course-list">'+visible.map(u=>{
+    const mine=u.author===(ME&&ME.id);
+    const done=u.lessons.filter(l=>S.done[l.id]).length;
+    return '<article class="studio-course'+(ST.uid===u.uid?' selected':'')+'"><div class="row"><span class="ci">'+svg((COURSES.find(c=>c.id===u.course)||COURSES[0]).icon)+'</span><span style="min-width:0"><h3>'+esc(u.title)+'</h3><small>'+esc((COURSES.find(c=>c.id===u.course)||{}).title||'Курс')+' · '+u.lessons.length+' '+pl(u.lessons.length,['урок','урока','уроков'])+' · пройдено '+done+'/'+u.lessons.length+'</small></span></div><p class="sub">'+esc(u.desc||'Авторский курс')+'</p><span class="badge'+(u.published===false?'':' ok')+'">'+(u.published===false?'Черновик':'Опубликован')+(mine?' · мой':' · '+esc(u.authorName||'автор'))+'</span><div class="studio-actions">'+
+      '<button class="btn sm" data-act="studio-play-course" data-u="'+u.uid+'">Пройти курс</button>'+
+      (mine?'<button class="btn ghost sm" data-act="studio-select" data-u="'+u.uid+'">Добавить урок</button><button class="btn ghost sm" data-act="studio-export" data-u="'+u.uid+'">Скачать JSON</button><button class="btn ghost sm" data-act="studio-toggle" data-u="'+u.uid+'">'+(u.published===false?'Опубликовать':'Снять с публикации')+'</button><button class="btn bad sm" data-act="studio-delete" data-u="'+u.uid+'">Удалить</button>':'<button class="btn ghost sm" data-act="studio-fork" data-u="'+u.uid+'">Сделать копию</button>')+
+      '<button class="btn ghost sm" data-act="studio-share" data-u="'+u.uid+'">Код курса</button></div></article>';
+  }).join('')+'</div>':'<p class="studio-empty">Пока нет опубликованных курсов. Создай первый — и поделись им с другими.</p>';
+  h+='</section><section class="card" id="studio-editor"><h2>'+(active?'Добавить урок в курс':'Шаг 1. Название курса и урока')+'</h2><p class="sub">'+(active?'Курс выбран. Новый урок появится в нём после сохранения.':'Введи название курса и урока, затем добавь задания ниже. Курс создастся только после нажатия кнопки сохранения.')+'</p><p class="sub" id="studio-draft-status" role="status">Изменения автоматически сохраняются в этом браузере.</p>'+
+    '<p class="err" role="alert">'+esc(ST.err||'')+'</p><label class="l" for="st-course">Направление курса</label><select class="inp" id="st-course"'+(active?' disabled':'')+'>'+COURSES.map(c=>'<option value="'+c.id+'"'+(ST.course===c.id?' selected':'')+'>'+esc(c.title)+'</option>').join('')+'</select>'+
+    '<label class="l" for="st-title">Название курса</label><input class="inp" id="st-title" maxlength="120" value="'+esc(ST.title)+'" placeholder="Например, Уверенная презентация">'+
+    '<label class="l" for="st-desc">О чём курс</label><textarea class="inp" id="st-desc" rows="2" maxlength="240" placeholder="Кому и чему поможет курс">'+esc(ST.desc)+'</textarea>'+
+    '<label class="l" for="st-lesson">Название урока</label><input class="inp" id="st-lesson" maxlength="120" value="'+esc(ST.lessonTitle)+'" placeholder="Например, Структура выступления">'+
+    '<label class="chk"><input type="checkbox" id="st-published"'+(ST.published?' checked':'')+'> Опубликовать для других пользователей на этом устройстве</label>'+
+    '<div class="card" style="margin-top:16px;background:var(--surface2)"><h2>Черновик от помощника</h2><p class="sub">Локальный шаблонный генератор не отправляет текст в интернет. Проверь факты и правильные ответы перед публикацией.</p><label class="l" for="st-topic">Тема для генерации</label><input class="inp" id="st-topic" maxlength="100" value="'+esc(ST.source)+'" placeholder="Например, как давать обратную связь"><div class="studio-toolbar"><button class="btn sun sm" data-act="studio-generate">Создать черновик</button><button class="btn ghost sm" data-act="studio-upload">Загрузить .txt или .md</button><input id="st-file" type="file" accept=".txt,.md,.csv,text/plain,text/markdown,text/csv" hidden></div></div>'+
+    '<h2 style="margin-top:18px">Шаг 2. Задания · '+ST.qs.length+'</h2>'+(!ST.qs.length?'<p class="studio-empty">Добавь первое задание кнопкой ниже или создай черновик по теме.</p>':'')+ST.qs.map(studioQuestion).join('')+
+    '<div class="studio-toolbar"><button class="btn ghost sm" data-act="studio-addq" data-t="c"'+(ST.qs.length>=30?' disabled':'')+'>＋ Выбор ответа</button><button class="btn ghost sm" data-act="studio-addq" data-t="tf"'+(ST.qs.length>=30?' disabled':'')+'>＋ Верно / неверно</button></div>'+
+    '<button class="btn wide" style="margin-top:18px" data-act="studio-save">'+(active?'Сохранить курс и добавить урок':'Сохранить курс и урок')+'</button></section>';
+  $('#v-studio').innerHTML=h;
+  const root=$('#v-studio');
+  if(!root.dataset.dragBound){
+    root.dataset.dragBound='1';
+    root.addEventListener('dragstart',e=>{const card=e.target.closest('.studio-q');if(!card)return;studioSync();ST.drag=+card.dataset.stQ;card.classList.add('dragging');e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',String(ST.drag))});
+    root.addEventListener('dragend',e=>{const card=e.target.closest('.studio-q');if(card)card.classList.remove('dragging');root.querySelectorAll('.drop-target').forEach(x=>x.classList.remove('drop-target'))});
+    root.addEventListener('dragover',e=>{const card=e.target.closest('.studio-q');if(card){e.preventDefault();card.classList.add('drop-target')}});
+    root.addEventListener('drop',e=>{const card=e.target.closest('.studio-q');if(!card)return;e.preventDefault();const from=Number(e.dataTransfer.getData('text/plain')),to=+card.dataset.stQ;if(from!==to)studioMoveQuestion(from,to);});
+  }
+}
+function studioMoveQuestion(from,to){
+  if(from<0||to<0||from>=ST.qs.length||to>=ST.qs.length||from===to)return;
+  const q=ST.qs.splice(from,1)[0];ST.qs.splice(to,0,q);
+  ST.qs.forEach(x=>{if(!x.branch)return;['correct','wrong'].forEach(k=>{const n=x.branch[k];if(n===from)x.branch[k]=to;else if(from<to&&n>from&&n<=to)x.branch[k]=n-1;else if(from>to&&n>=to&&n<from)x.branch[k]=n+1})});
+  renderStudio();
+}
+function studioSave(){
+  studioSync();ST.title=ST.title.trim();ST.desc=ST.desc.trim();ST.lessonTitle=ST.lessonTitle.trim();ST.err='';
+  if(ST.title.length<2)ST.err='Укажи название курса.';
+  else if(ST.lessonTitle.length<2)ST.err='Укажи название урока.';
+  else if(!ST.qs.length)ST.err='Добавь хотя бы одно задание.';
+  for(let i=0;!ST.err&&i<ST.qs.length;i++){
+    const q=ST.qs[i];q.q=(q.q||'').trim();q.e=(q.e||'').trim();
+    if(q.q.length<2||q.e.length<2)ST.err='Заполни текст задания и объяснение в задании '+(i+1)+'.';
+    else if(q.t==='c'&&(q.o.some(x=>!String(x).trim())||new Set(q.o.map(x=>String(x).trim().toLowerCase())).size<q.o.length))ST.err='Заполни 4 разных варианта в задании '+(i+1)+'.';
+    if(q.branch)for(const k of ['correct','wrong']){const n=q.branch[k];if(n!==null&&(n===-1||Number.isInteger(n)&&n>i&&n<ST.qs.length))continue;if(n!==null){ST.err='Ветка задания '+(i+1)+' должна вести к более позднему заданию или к завершению.';break}}
+  }
+  if(!ST.err&&ST.qs.length>30)ST.err='В одном уроке может быть не больше 30 заданий.';
+  if(ST.err){renderStudio();return}
+  const questions=ST.qs.map(q=>{
+    const o={t:q.t,q:q.q,e:q.e};
+    if(q.t==='c'){o.o=q.o.map(x=>String(x).trim());o.a=q.a}
+    else o.a=q.a===true;
+    if(q.branch)o.branch=q.branch;
+    return o;
+  });
+  let unit=ST.uid?CUSTOM.find(x=>x.uid===ST.uid):CUSTOM.find(x=>x.author===(ME&&ME.id)&&x.title.toLowerCase()===ST.title.toLowerCase()&&x.course===ST.course);
+  if(unit&&unit.author!==(ME&&ME.id)){ST.err='Нельзя редактировать чужой курс. Создай копию.';renderStudio();return}
+  if(!unit){
+    unit={uid:'cu'+Date.now().toString(36)+randHex(3),course:ST.course,title:ST.title,desc:ST.desc,c:(CUSTOM.filter(u=>u.course===ST.course).length%4)+1,author:ME.id,authorName:ME.name,published:ST.published,custom:true,lessons:[]};
+    CUSTOM.push(unit);
+  }
+  if(unit.lessons.length>=60){ST.err='В курсе уже достигнут лимит в 60 уроков.';renderStudio();return}
+  unit.title=ST.title;unit.desc=ST.desc;unit.published=ST.published;unit.author=ME.id;unit.authorName=ME.name;
+  unit.lessons.push({id:'sl'+Date.now().toString(36)+randHex(3),title:ST.lessonTitle,custom:true,q:questions});
+  saveCustom();applyCustom();rebuildDerived();lsDel(studioDraftKey());studioReset(unit.course);renderAll();toast('Урок сохранён'+(unit.published?' и опубликован':' как черновик'));
+}
+function studioExport(unit){
+  if(!unit||unit.author!==(ME&&ME.id)){toast('Можно экспортировать только свой курс');return}
+  const blob=new Blob([JSON.stringify({format:'gorizont-course',version:1,course:unit},null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download=(unit.title||'kurs').toLowerCase().replace(/[^a-zа-яё0-9]+/gi,'-').replace(/^-|-$/g,'')+'.json';
+  document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function studioReadCourseFile(input){
+  const file=input.files&&input.files[0];input.value='';if(!file)return;
+  if(file.size>2e6){toast('Файл курса должен быть меньше 2 МБ');return}
+  const reader=new FileReader();
+  reader.onerror=()=>toast('Не удалось прочитать файл курса');
+  reader.onload=()=>{
+    try{
+      const pack=JSON.parse(String(reader.result||''));
+      const source=pack&&pack.format==='gorizont-course'&&pack.version===1?pack.course:null;
+      if(!validCustomUnit(source))throw new Error('invalid-course');
+      const incoming=JSON.parse(JSON.stringify(source));
+      incoming.uid='cu'+Date.now().toString(36)+randHex(3);incoming.author=ME.id;incoming.authorName=ME.name;incoming.published=false;
+      incoming.lessons=incoming.lessons.map(l=>({id:'sl'+Date.now().toString(36)+randHex(3),title:l.title,custom:true,q:l.q}));
+      CUSTOM.push(incoming);saveCustom();applyCustom();rebuildDerived();renderAll();toast('Курс импортирован как черновик');
+    }catch(e){toast('Файл не является поддерживаемым курсом Горизонта')}
+  };
+  reader.readAsText(file);
+}
+function studioImportCourse(){
+  openSheet('<p class="sk">Перенос курса</p><h3>Импортировать курс</h3><p class="sd">Вставь код, созданный в студии на другом устройстве. После импорта курс станет твоим черновиком.</p><textarea id="studioCode" class="inp code" rows="5" spellcheck="false" aria-label="Код курса"></textarea><button class="btn" data-act="studio-import-code">Загрузить курс</button><button class="btn ghost" data-act="close">Отмена</button>');
+}
+function studioReadFile(input){
+  const file=input.files&&input.files[0];input.value='';if(!file)return;
+  if(file.size>50000){toast('Файл должен быть меньше 50 КБ');return}
+  const reader=new FileReader();
+  reader.onerror=()=>toast('Не удалось прочитать файл. Попробуй файл .txt или .md.');
+  reader.onload=()=>{
+    const text=String(reader.result||'').replace(/\r/g,'').trim();
+    const lines=text.split(/[\n.!?]+/).map(x=>x.trim()).filter(x=>x.length>15).slice(0,20);
+    if(!lines.length){toast('В файле не найдено достаточно текста для задания');return}
+    studioSync();ST.source=lines.slice(0,3).join(' ').slice(0,100);
+    const answer=lines[0].slice(0,300);
+    const distractors=['В исходном материале этого утверждения нет.','Это утверждение противоречит исходному материалу.','Такой вывод не следует из загруженного текста.'];
+    ST.qs=[{t:'c',q:'Какое утверждение взято из загруженного материала?',o:[answer].concat(distractors),a:0,e:'Сверь ответ с исходным текстом и при необходимости отредактируй его.'}];
+    if(!ST.title.trim())ST.title=file.name.replace(/\.[^.]+$/,'').slice(0,120);
+    if(!ST.lessonTitle.trim())ST.lessonTitle='По материалам: '+file.name.replace(/\.[^.]+$/,'').slice(0,80);
+    ST.err='';renderStudio();toast('Материал обработан локально — проверь черновик');
+  };
+  reader.readAsText(file);
+}
+function studioImportCode(){
+  try{
+    const raw=String($('#studioCode').value||'').trim().replace(/\s+/g,'');
+    if(!/^GZC\./.test(raw))throw new Error('bad-prefix');
+    const arr=JSON.parse(b64d(raw.slice(4)));
+    if(!Array.isArray(arr)||arr.length!==1||!validCustomUnit(arr[0]))throw new Error('bad-course');
+    const incoming=JSON.parse(JSON.stringify(arr[0])),baseIds=new Set(FLAT.map(f=>f.id));
+    incoming.uid='cu'+Date.now().toString(36)+randHex(3);incoming.author=ME.id;incoming.authorName=ME.name;incoming.published=false;
+    incoming.lessons=incoming.lessons.map(l=>({id:'sl'+Date.now().toString(36)+randHex(3),title:l.title,custom:true,q:l.q}));
+    if(incoming.lessons.some(l=>baseIds.has(l.id)))throw new Error('id-collision');
+    CUSTOM.push(incoming);saveCustom();applyCustom();rebuildDerived();closeSheet();renderAll();toast('Курс импортирован как черновик');
+  }catch(e){toast('Код курса повреждён или имеет неподдерживаемый формат')}
+}
+function studioShare(unit){
+  const code='GZC.'+b64e(JSON.stringify([unit]));
+  openSheet('<p class="sk">Поделиться</p><h3>'+esc(unit.title)+'</h3><p class="sd">Передай этот код другому пользователю. Импорт сохранит курс как его личный черновик.</p><textarea id="studioShareCode" class="inp code" rows="5" readonly aria-label="Код для передачи">'+esc(code)+'</textarea><button class="btn" data-act="studio-copy">Скопировать код</button><button class="btn ghost" data-act="close">Готово</button>');
+}
+function renderAll(){applyPersonal();renderHdr();renderNav();renderPath();renderPractice();renderLeague();renderProfile();renderStudio();if(ME&&ME.admin)renderAdmin()}
 
 /* ---------- views ---------- */
 let view='path';
 function setView(v){
   if(v==='admin'&&!(ME&&ME.admin))v='path';
+  if(view==='studio')studioSync();
   view=v;if(v==='league')cloudLeague();if(v==='profile')cloudReviews();
-  ['path','practice','league','profile','admin'].forEach(n=>{$('#v-'+n).hidden=n!==v});
+  ['path','practice','league','profile','studio','admin'].forEach(n=>{$('#v-'+n).hidden=n!==v});
   renderAll();window.scrollTo(0,0);
 }
 
@@ -1986,8 +2562,8 @@ function startLesson(id){
   L={mode:'lesson',f,practice,queue:f.l.q.map((q,i)=>({q,lid:id,qi:i,retry:false})),total:f.l.q.length,right:0,mistakes:0,state:'ask',fail:false,cur:null};
   setBlitzUI(false);openLesson();nextQ();
 }
-function startReview(){
-  const list=weakList();
+function startReview(courseId){
+  const list=weakList().filter(w=>!courseId||FLAT.some(f=>f.id===w.lid&&f.u.course===courseId));
   if(!list.length){toast('Пока нет вопросов для повторения');return}
   L={mode:'review',practice:true,queue:list.map(x=>({q:x.q,lid:x.lid,qi:x.qi,retry:false})),total:list.length,right:0,mistakes:0,state:'ask',fail:false,cur:null};
   setBlitzUI(false);openLesson();nextQ();
@@ -2017,7 +2593,7 @@ function lessonHearts(){
 function setBar(p){const b=$('#lbar');b.style.setProperty('--w',Math.max(0,Math.min(100,p))+'%');b.setAttribute('aria-valuenow',Math.round(p))}
 function updBar(){setBar(L&&L.total?L.right/L.total*100:0)}
 function nextQ(){
-  if(!L.queue.length){if(L.mode==='review')reviewFinish();else finish();return}
+  if(!L.queue.length){if(L.mode==='review')reviewFinish();else if(L.mode==='challenge')duelFinish();else finish();return}
   const c=L.queue[0],q=c.q;
   c.sel=null;c.placed=[];
   if(q.t==='c')c.ord=shuffle(q.o.map((_,i)=>i));
@@ -2062,7 +2638,7 @@ function faceStart(){
 {const _rq=renderQ;renderQ=function(){_rq.apply(this,arguments);try{faceStart()}catch(e){}}}
 function renderQ(){
   const c=L.cur,q=c.q;
-  let h='<div class="qwrap"><p class="qkind">'+KIND[q.t]+'</p>'+(q.img?'<div class="sign'+(WIDE[q.img]?' wide':'')+'">'+SIGN[q.img]+'</div>':'')+'<h2 class="q">'+q.q+'</h2>';
+  let h=(L.mode==='challenge'?'<div class="duel-live" role="status"><b>Дуэль · твой прогресс <span id="duel-live-progress">'+(L.right+L.mistakes)+' / '+L.total+'</span></b><div class="sub">'+duelPlayerRows()+'</div></div>':'')+'<div class="qwrap"><p class="qkind">'+KIND[q.t]+'</p>'+(q.img?'<div class="sign'+(WIDE[q.img]?' wide':'')+'">'+SIGN[q.img]+'</div>':'')+'<h2 class="q">'+q.q+'</h2>';
   if(q.t==='c')h+='<div class="opts">'+c.ord.map((oi,k)=>'<button class="opt" data-k="'+k+'" aria-pressed="false"><span class="k">'+(k+1)+'</span><span>'+q.o[oi]+'</span></button>').join('')+'</div>';
   if(q.t==='tf')h+='<div class="opts two"><button class="opt big" data-k="1" aria-pressed="false">Верно</button><button class="opt big" data-k="0" aria-pressed="false">Неверно</button></div>';
   if(q.t==='o')h+='<div class="slots" id="slots"></div><div class="pool" id="pool"></div>';
@@ -2158,16 +2734,20 @@ function check(){
     body.querySelectorAll('#pool .chip').forEach(x=>{x.disabled=true});
     if(!ok)$('#corr').innerHTML='<ol class="correct"><b>Правильный порядок</b>'+q.items.map(t=>'<li>'+t+'</li>').join('')+'</ol>';
   }
-  record(c,ok);
+  if(L.mode!=='challenge')record(c,ok);
   if(ok){L.right++}
   else{
     L.mistakes++;
     if(!L.practice)loseHeart();
-    if(!c.retry)L.queue.push({q,lid:c.lid,qi:c.qi,retry:true});
+    const hasWrongBranch=q.branch&&Number.isInteger(q.branch.wrong);
+    if(L.mode!=='challenge'&&!c.retry&&!hasWrongBranch)L.queue.push({q,lid:c.lid,qi:c.qi,retry:true});
     if(!L.practice&&S.hearts<=0)L.fail=true;
   }
+  const route=q.branch&&q.branch[ok?'correct':'wrong'];
+  L.routeTarget=Number.isInteger(route)?route:null;
   sfx(ok?'ok':'bad');
-  save();renderHdr();lessonHearts();setFoot();updBar();
+  if(L.mode==='challenge')duelProgressUpdate();else save();
+  renderHdr();lessonHearts();setFoot();updBar();
   const cr=$('#corr');
   if(!ok&&cr&&cr.firstChild&&cr.scrollIntoView)cr.scrollIntoView({block:'nearest',behavior:'smooth'});
 }
@@ -2192,9 +2772,19 @@ function setFoot(){
 $('#lbtn').addEventListener('click',()=>{
   if(L&&L.mode==='five'){fiveBtn();return}
   if(!L||(L.mode==='blitz'&&L.state!=='result'))return;
+  if(L.mode==='challenge'&&L.state==='result'){if(L.submitFailed)duelSubmitFinal();else exitLesson();return}
   if(L.state==='ask'){if(canCheck())check();return}
   if(L.state==='good'||L.state==='bad'){
     L.queue.shift();
+    const target=L.routeTarget;L.routeTarget=null;
+    if(target===-1){
+      const skipped=L.queue.filter(x=>!x.retry).length;
+      L.total=Math.max(L.right+L.mistakes,L.total-skipped);L.queue.length=0;
+    }else if(Number.isInteger(target)){
+      let skipped=0;
+      while(L.queue.length&&L.queue[0].qi!==target){if(!L.queue.shift().retry)skipped++}
+      L.total=Math.max(L.right+L.mistakes,L.total-skipped);
+    }
     if(L.fail){showFail();return}
     nextQ();return;
   }
@@ -2326,6 +2916,7 @@ function confetti(){
   setTimeout(()=>wrap.remove(),1800);
 }
 function exitLesson(silent){
+  if(L&&L.mode==='challenge'){DUEL.playing='';DUEL.paused=true}
   if(L&&L.iv)clearInterval(L.iv);
   L=null;setBlitzUI(false);$('#lesson').hidden=true;document.documentElement.style.overflow='';
   if(!$('#auth').hidden)return;
@@ -2336,7 +2927,7 @@ function askQuit(){
   if(!L)return;
   if(L.mode==='five'){exitLesson();return}
   if(L.state==='result'||L.state==='over'){exitLesson();return}
-  openSheet('<h3>Выйти?</h3><p class="sd">'+(L.mode==='blitz'?'Результат блица не сохранится.':'Прогресс этого занятия не сохранится.')+'</p><button class="btn" data-act="close">Остаться</button><button class="btn ghost" data-act="quit">Выйти</button>');
+  openSheet('<h3>Выйти?</h3><p class="sd">'+(L.mode==='blitz'?'Результат блица не сохранится.':L.mode==='challenge'?'Уже отправленные ответы сохранены. Можно вернуться к дуэли позже.':'Прогресс этого занятия не сохранится.')+'</p><button class="btn" data-act="close">Остаться</button><button class="btn ghost" data-act="quit">Выйти</button>');
 }
 $('#lx').addEventListener('click',askQuit);
 $('#lsnd').addEventListener('click',()=>{S.sound=!S.sound;saveLocal();updSndBtn();if(S.sound)sfx('ok')});
@@ -2748,7 +3339,8 @@ const TOUR=[
  ['heart','Сердечки, XP и серия','Ошибка в новом уроке отнимает сердечко (всего 15, одно возвращается за 6 минут). При повторении сердечки не тратятся. За урок дают до 15 XP, за повторение 5. Серия растёт, если заниматься каждый день, а заморозка спасает её при одном пропуске.'],
  ['sun','Цель дня и солнце','Набирай XP до своей цели, и солнце на главной поднимется. Цель можно менять в профиле: 20, 40, 60 или 100 XP. Под солнцем лежат задания дня: выполни их и забери награду, а за все три будет бонус.'],
  ['target','Практика','Здесь разминка на 5 вопросов раз в день, блиц на 60 секунд, работа над ошибками и словарь терминов. Это лучший способ закрепить пройденное, и сердечки там не нужны.'],
- ['user','Профиль и аккаунт','В профиле видны уровень, неделя, достижения и настройки: тема, звук, цель. Там же смена имени и пароля, и выход из аккаунта. Эту подсказку всегда можно открыть кнопкой «Как это работает» на странице «Путь».']
+ ['user','Профиль и аккаунт','В профиле видны уровень, неделя, достижения и настройки: тема, звук, цель. Там же смена имени и пароля, и выход из аккаунта. Эту подсказку всегда можно открыть кнопкой «Как это работает» на странице «Путь».'],
+ ['book','Студия курсов','В разделе «Курсы» создай курс и уроки, добавь вопросы или загрузи текстовый материал. Перетаскивай задания, настраивай переходы для верных и неверных ответов. Черновики приватны; публикация доступна аккаунтам на этом устройстве. Код курса можно передать на другое устройство.']
 ];
 function showTour(i){
   i=Math.max(0,Math.min(TOUR.length-1,i));
@@ -2795,9 +3387,74 @@ async function act(a,b){
     case 'course':S.course=b.dataset.course;save();renderPath();break;
     case 'lesson':{
       const f=FLAT.find(x=>x.id===b.dataset.id);if(!f)break;
-      const st=S.done[f.id]?'done':(courseFlat(S.course).findIndex(x=>!S.done[x.id])===courseFlat(S.course).indexOf(f)?'cur':'locked');
-      if(st==='locked'&&!(ME&&ME.admin)){toast('Сначала пройди предыдущий урок');break}
+      const st=S.done[f.id]?'done':(f.u.custom||ME&&ME.admin?'open':(courseFlat(S.course).findIndex(x=>!S.done[x.id])===courseFlat(S.course).indexOf(f)?'cur':'locked'));
+      if(st==='locked'&&!(ME&&ME.admin)&&!f.u.custom){toast('Сначала пройди предыдущий урок');break}
       startLesson(f.id);break}
+    case 'studio-new':{
+      studioReset(ST.course);ST.qs.push(studioBlankQ('c'));renderStudio();
+      requestAnimationFrame(()=>{const title=$('#st-title');if(title){title.scrollIntoView({behavior:'smooth',block:'center'});title.focus()}});
+      break}
+    case 'studio-select':{
+      const u=CUSTOM.find(x=>x.uid===b.dataset.u&&x.author===(ME&&ME.id));if(!u)break;
+      studioReset(u.course);ST.uid=u.uid;ST.title=u.title;ST.desc=u.desc;ST.published=u.published!==false;renderStudio();$('#st-lesson').focus();break}
+    case 'studio-play-course':{
+      const u=CUSTOM.find(x=>x.uid===b.dataset.u&&(x.published!==false||x.author===(ME&&ME.id)));
+      if(!u||!u.lessons.length){toast('В этом курсе пока нет уроков');break}
+      S.course=u.course;
+      const sameCourse=UNITS.filter(x=>x.course===u.course);
+      sameCourse.forEach((unit,i)=>{openU[u.course+i]=unit.uid===u.uid});
+      const lesson=u.lessons.find(x=>!S.done[x.id])||u.lessons[0];
+      setView('path');
+      requestAnimationFrame(()=>{
+        const node=$('#v-path [data-id="'+lesson.id+'"]');
+        if(node){node.scrollIntoView({behavior:'smooth',block:'center'});try{node.focus({preventScroll:true})}catch(e){}}
+      });
+      break}
+    case 'studio-course':studioSync();ST.course=b.value;break;
+    case 'studio-addq':{
+      studioSync();if(ST.qs.length>=30){toast('В одном уроке может быть не больше 30 заданий');break}
+      ST.qs.push(studioBlankQ(b.dataset.t==='tf'?'tf':'c'));renderStudio();break}
+    case 'studio-rmq':{
+      studioSync();const i=+b.dataset.i;if(i<0||i>=ST.qs.length)break;
+      ST.qs.splice(i,1);
+      ST.qs.forEach(q=>{if(!q.branch)return;['correct','wrong'].forEach(k=>{const n=q.branch[k];if(n===i)q.branch[k]=null;else if(Number.isInteger(n)&&n>i)q.branch[k]=n-1});if(q.branch.correct===null&&q.branch.wrong===null)delete q.branch});
+      renderStudio();break}
+    case 'studio-moveq':studioSync();studioMoveQuestion(+b.dataset.i,+b.dataset.i+(+b.dataset.d));break;
+    case 'studio-generate':{
+      studioSync();const topic=ST.source.trim().slice(0,100);if(topic.length<2){ST.err='Сначала укажи тему для генерации.';renderStudio();break}
+      const t=topic.replace(/[<>]/g,'');
+      ST.qs=[
+        {t:'c',q:'С чего лучше начать работу с темой «'+t+'»?',o:['Сформулировать цель и разбить путь на проверяемые шаги','Сначала изучить все материалы без плана','Полагаться только на первое впечатление','Не проверять результат'],a:0,e:'Конкретная цель и небольшие проверяемые шаги помогают применить тему на практике.'},
+        {t:'c',q:'Что поможет понять, получилось ли разобраться в теме «'+t+'»?',o:['Применить знание на примере и проверить результат','Запомнить только заголовок','Избегать обратной связи','Сразу перейти к следующей теме'],a:0,e:'Практический пример помогает заметить пробелы. Проверь и адаптируй этот черновик под свой материал.'},
+        {t:'tf',q:'Любое утверждение по теме «'+t+'» можно принимать без проверки.',a:false,e:'Проверяй важные факты и решения по надёжным источникам.'}
+      ];
+      if(!ST.lessonTitle.trim())ST.lessonTitle='Основы: '+topic.slice(0,70);
+      ST.err='';renderStudio();toast('Черновик готов — проверь ответы и объяснения');break}
+    case 'studio-upload':$('#st-file').click();break;
+    case 'studio-import-file':$('#st-import-file').click();break;
+    case 'studio-save':studioSave();break;
+    case 'studio-toggle':{
+      const u=CUSTOM.find(x=>x.uid===b.dataset.u&&x.author===(ME&&ME.id));if(!u)break;
+      u.published=u.published===false;saveCustom();applyCustom();rebuildDerived();renderAll();toast(u.published?'Курс опубликован':'Курс снят с публикации');break}
+    case 'studio-delete':{
+      const u=CUSTOM.find(x=>x.uid===b.dataset.u&&x.author===(ME&&ME.id));if(!u)break;
+      openSheet('<h3>Удалить курс «'+esc(u.title)+'»?</h3><p class="sd">Все уроки курса исчезнут из каталога. Это действие нельзя отменить.</p><button class="btn bad" data-act="studio-delete-confirm" data-u="'+u.uid+'">Удалить курс</button><button class="btn ghost" data-act="close">Отмена</button>');break}
+    case 'studio-delete-confirm':{
+      const u=CUSTOM.find(x=>x.uid===b.dataset.u&&x.author===(ME&&ME.id));if(!u)break;
+      CUSTOM=CUSTOM.filter(x=>x.uid!==u.uid);if(ST.uid===u.uid)studioReset(u.course);
+      saveCustom();applyCustom();rebuildDerived();closeSheet();renderAll();toast('Курс удалён');break}
+    case 'studio-share':{
+      const u=CUSTOM.find(x=>x.uid===b.dataset.u);if(u)studioShare(u);break}
+    case 'studio-export':{
+      const u=CUSTOM.find(x=>x.uid===b.dataset.u&&x.author===(ME&&ME.id));studioExport(u);break}
+    case 'studio-copy':copyText($('#studioShareCode').value,'Код курса скопирован');break;
+    case 'studio-import':studioImportCourse();break;
+    case 'studio-import-code':studioImportCode();break;
+    case 'studio-fork':{
+      const original=CUSTOM.find(x=>x.uid===b.dataset.u&&x.published!==false);if(!original)break;
+      const copy=JSON.parse(JSON.stringify(original));copy.uid='cu'+Date.now().toString(36)+randHex(3);copy.title=(copy.title+' — копия').slice(0,120);copy.author=ME.id;copy.authorName=ME.name;copy.published=false;
+      copy.lessons=copy.lessons.map(l=>({id:'sl'+Date.now().toString(36)+randHex(3),title:l.title,custom:true,q:l.q}));
+      CUSTOM.push(copy);saveCustom();applyCustom();rebuildDerived();renderAll();toast('Копия сохранена в черновиках');break}
     case 'goal':
       openSheet('<p class="sk">Цель дня</p><h3>Сколько XP в день?</h3><p class="sd">Урок даёт до 15 XP, повторение 5. Цель можно менять в любой момент.</p><div class="gopts">'+GOALS.map(g=>'<button data-act="setgoal" data-g="'+g[0]+'" aria-pressed="'+(S.goal===g[0])+'"><b>'+g[0]+'</b><small>'+g[1]+'</small></button>').join('')+'</div><button class="btn ghost" data-act="close">Закрыть</button>');break;
     case 'setgoal':S.goal=+b.dataset.g;save();closeSheet();renderAll();break;
@@ -2834,7 +3491,16 @@ async function act(a,b){
     case 'five':startFive();break;
     case 'fvclaim':fvClaim();break;
     case 'review':startReview();break;
+    case 'review-course':startReview(b.dataset.course);break;
     case 'terms':pview='terms';tq='';tc='all';renderPractice();window.scrollTo(0,0);break;
+    case 'duel-hub':pview='duel';DUEL.uid=FA&&FA.currentUser?FA.currentUser.uid:'';renderPractice();break;
+    case 'duel-create':await duelCreate();break;
+    case 'duel-join':await duelJoin();break;
+    case 'duel-start':await duelStart();break;
+    case 'duel-resume':duelBegin();break;
+    case 'duel-copy':copyText(DUEL.id,'Код вызова скопирован');break;
+    case 'duel-new':duelStopListening();DUEL={id:'',room:null,unsub:null,uid:FA&&FA.currentUser?FA.currentUser.uid:'',error:'',playing:''};renderPractice();break;
+    case 'duel-back':duelLeave();break;
     case 'hub':pview='hub';renderPractice();break;
     case 'tcourse':tc=b.dataset.c;renderTerms();break;
     case 'theme':setTheme(b.dataset.th);renderProfile();break;
@@ -2865,7 +3531,7 @@ async function act(a,b){
       const n=$('#rnm').value.trim().replace(/\s+/g,' ');
       if(n.length<2)return serr('Имя должно быть не короче двух символов.');
       if(nameTaken(n,ME.id))return serr('Такое имя уже есть на этом устройстве.');
-      const a=ACC.list.find(x=>x.id===ME.id);a.fe=a.fe||fbMail(a.name);a.name=n;ME=a;saveAcc();cloudPush();closeSheet();renderAll();toast('Имя изменено');break}
+      const a=ACC.list.find(x=>x.id===ME.id);a.fe=a.fe||fbMail(a.name);a.name=n;ME=a;CUSTOM.forEach(u=>{if(u.author===ME.id)u.authorName=n});saveCustom();saveAcc();cloudPush();closeSheet();renderAll();toast('Имя изменено');break}
     case 'chpw':openSheet('<p class="sk">Безопасность</p><h3>Сменить пароль</h3>'+pwForm(true)+'<button class="btn" data-act="dochpw" data-primary>Сменить</button><button class="btn ghost" data-act="close">Отмена</button>');break;
     case 'dochpw':{
       const a=ACC.list.find(x=>x.id===ME.id),po=$('#po').value,pn=$('#pn').value,p2=$('#pn2').value;
@@ -3014,8 +3680,17 @@ document.addEventListener('click',e=>{
   if(b&&!b.closest('#lbody'))act(b.dataset.act,b);
   if(e.target===$('#sheet'))closeSheet();
 });
-document.addEventListener('change',e=>{const a=e.target.getAttribute&&e.target.getAttribute('data-act-change');if(a)act(a,e.target)});
-document.addEventListener('input',e=>{if(e.target.id==='tsearch'){tq=e.target.value;const l=$('#tlist');if(l)l.innerHTML=termsList()}});
+document.addEventListener('change',e=>{
+  if(e.target.id==='st-file'){studioReadFile(e.target);return}
+  if(e.target.id==='st-import-file'){studioReadCourseFile(e.target);return}
+  if(e.target.id&&/^st-type-/.test(e.target.id)){studioSync();renderStudio();return}
+  if(e.target.closest('#v-studio')){studioSync();return}
+  const a=e.target.getAttribute&&e.target.getAttribute('data-act-change');if(a)act(a,e.target)
+});
+document.addEventListener('input',e=>{
+  if(e.target.closest('#v-studio')){studioSync();return}
+  if(e.target.id==='tsearch'){tq=e.target.value;const l=$('#tlist');if(l)l.innerHTML=termsList()}
+});
 $('#sheet').addEventListener('keydown',e=>{
   if(e.key==='Enter'&&e.target.tagName==='INPUT'){e.preventDefault();const p=$('#sheetCard [data-primary]');if(p)p.click();return}
   if(e.key==='Tab'){
