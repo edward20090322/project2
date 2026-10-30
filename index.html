@@ -2532,7 +2532,15 @@ function studioShare(unit){
   const code='GZC.'+b64e(JSON.stringify([unit]));
   openSheet('<p class="sk">Поделиться</p><h3>'+esc(unit.title)+'</h3><p class="sd">Передай этот код другому пользователю. Импорт сохранит курс как его личный черновик.</p><textarea id="studioShareCode" class="inp code" rows="5" readonly aria-label="Код для передачи">'+esc(code)+'</textarea><button class="btn" data-act="studio-copy">Скопировать код</button><button class="btn ghost" data-act="close">Готово</button>');
 }
-function renderAll(){applyPersonal();renderHdr();renderNav();renderPath();renderPractice();renderLeague();renderProfile();renderStudio();if(ME&&ME.admin)renderAdmin()}
+function renderAll(){
+  applyPersonal();renderHdr();renderNav();
+  if(view==='path')renderPath();
+  else if(view==='practice')renderPractice();
+  else if(view==='league')renderLeague();
+  else if(view==='profile')renderProfile();
+  else if(view==='studio')renderStudio();
+  else if(view==='admin')renderAdmin();
+}
 
 /* ---------- views ---------- */
 let view='path';
@@ -3478,13 +3486,30 @@ async function act(a,b){
       $$('#starsPick .star').forEach(s=>{const sn=+s.dataset.n;s.classList.toggle('on',sn<=reviewStars);s.setAttribute('aria-pressed',sn<=reviewStars)});
       break}
     case 'submitreview':{
-      if(!FA||!FA.currentUser||!FS){serr('Нужен аккаунт с облачной синхронизацией.');break}
+      const u=FA&&FA.currentUser;
+      if(!FS||!u||!ME||ME.guest){serr('Нужен аккаунт с облачной синхронизацией. Гостевой режим не поддерживает отзывы.');break}
+      if(u.email!==mailFor(ME)){serr('Войдите в облачный аккаунт, который соответствует выбранному профилю.');break}
       const txt=($('#rvtext')?$('#rvtext').value:'').trim().slice(0,200),st=reviewStars;
       b.disabled=true;
+      serr('');
       try{
-        await tmo(FS.collection('reviews').doc(FA.currentUser.uid).set({from:FA.currentUser.uid,fromName:ME?ME.name:'',stars:st,text:txt,ts:Date.now()}),9000);
+        await tmo(FS.collection('reviews').doc(u.uid).set({from:u.uid,fromName:ME.name,stars:st,text:txt,ts:Date.now()}),30000);
         closeSheet();toast('Спасибо за отзыв!');cloudReviews(true);
-      }catch(e){b.disabled=false;serr('Не удалось отправить. Проверь связь и попробуй ещё раз.')}
+      }catch(e){
+        b.disabled=false;
+        const code=e&&e.code;
+        serr(code==='permission-denied'
+          ?'Firebase запрещает запись отзывов. Проверь правила доступа Firestore для коллекции reviews.'
+          :code==='unauthenticated'
+            ?'Сеанс облачного аккаунта истёк. Выйди и войди снова.'
+            :code==='timeout'
+              ?'Firebase не ответил за 30 секунд. Отправка могла остаться в очереди; проверь отзыв в профиле чуть позже, прежде чем отправлять снова.'
+              :code==='unavailable'||code==='auth/network-request-failed'
+              ?'Нет соединения с облаком. Проверь интернет и попробуй ещё раз.'
+              :code==='deadline-exceeded'
+                ?'Firebase не успел обработать отзыв. Подожди немного и проверь профиль.'
+                :'Не удалось отправить отзыв ('+(code||'неизвестная ошибка')+'). Проверь подключение к Firebase.');
+      }
       break}
     case 'daily':startDaily();break;
     case 'blitz':startBlitz();break;
@@ -3858,9 +3883,11 @@ async function cloudReviews(force){
 }
 async function openReviewSheet(){
   reviewStars=5;let prevText='';
-  if(!FS||!FA||!FA.currentUser){toast('Чтобы оставить отзыв, выйди из аккаунта и войди снова с паролем (не как гость)');return}
+  const u=await waitUser();
+  if(!FS||!u||!ME||ME.guest){toast('Для отзыва нужен аккаунт с облачной синхронизацией. Гостевой режим не поддерживает отзывы.');return}
+  if(u.email!==mailFor(ME)){toast('Войдите в облачный аккаунт, который соответствует выбранному профилю.');return}
   try{
-    const d=await tmo(FS.collection('reviews').doc(FA.currentUser.uid).get(),9000);
+    const d=await tmo(FS.collection('reviews').doc(u.uid).get(),9000);
     if(d.exists){const c=d.data();reviewStars=Math.min(5,Math.max(1,+c.stars||5));prevText=String(c.text||'')}
   }catch(e){}
   openSheet('<p class="sk">Отзыв</p><h3>О приложении «Горизонт»</h3>'+
